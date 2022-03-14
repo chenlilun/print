@@ -8,6 +8,8 @@ import com.example.print.bean.SilkCarRowCol;
 import com.example.print.okhttp.OkHttpUtils;
 import com.example.print.p.SilkPrintMessage;
 import com.example.print.print.vo.PrintSelectSilkBarCodesVo;
+import com.example.print.print.vo.YjPrintData;
+import com.example.print.print.vo.print.JsonsRootBean;
 import com.example.print.utils.DateUtils;
 import com.example.print.utils.FileUtils;
 import com.example.print.utils.PrintUtil;
@@ -181,5 +183,10 @@ public class DoffService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void printYjSilkPater(JsonsRootBean printData) {
+        String s = new Gson().toJson(printData);
+        System.out.println("逸暻打印程序："+s);
     }
 }

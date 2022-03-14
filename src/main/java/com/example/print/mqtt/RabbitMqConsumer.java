@@ -45,7 +45,7 @@ public class RabbitMqConsumer {
 //    public static final String queue = FileUtils.readText("D:\\printService\\printMachine.txt").replace("\n", "");
 
 //    @RabbitListener(queues = "${spring.rabbitmq.listener.queues}")
-    @RabbitListener(queues = RabbitConfig.QUEUE)
+//    @RabbitListener(queues = RabbitConfig.QUEUE)
     public void consumer(String content, Channel channel, Message message) {
         System.out.println("自己mq消费了=====================");
         System.out.println("mq消费了===========" + content);

@@ -5,6 +5,8 @@ import com.example.print.bean.PrintData;
 import com.example.print.bean.SilkCarOnline;
 import com.example.print.okhttp.OkHttpUtils;
 import com.example.print.print.vo.PrintSelectSilkBarCodesVo;
+import com.example.print.print.vo.YjPrintData;
+import com.example.print.print.vo.print.JsonsRootBean;
 import com.example.print.service.DoffService;
 import com.example.print.utils.FileUtils;
 import com.google.gson.Gson;
@@ -126,6 +128,18 @@ public class MyControllor {
     public  String   printSilkCodesBySilkBarCodes(@RequestBody PrintSelectSilkBarCodesVo printSelectSilkBarCodesVo) {
         try{
             doffService.printSilkCodesBySilkBarCodes(printSelectSilkBarCodesVo);
+            return "打印成功";
+        }catch (Exception e){
+            e.printStackTrace();
+            return "打印失败";
+        }
+
+    }
+    //提前打选中落次条码打印
+    @PostMapping("/yJPrintData")
+    public  String   printSilkCodesBySilkBarCodes(@RequestBody JsonsRootBean printData) {
+        try{
+            doffService.printYjSilkPater(printData);
             return "打印成功";
         }catch (Exception e){
             e.printStackTrace();
