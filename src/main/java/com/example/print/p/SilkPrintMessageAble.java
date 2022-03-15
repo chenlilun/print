@@ -73,11 +73,11 @@ public class SilkPrintMessageAble implements Printable {
                 product = silkPrintMessage.getCls() ;
             }
               if(i==silkPrintMessageList.size()-1){
-                  String code = silkPrintMessage.getSilkCarCode() ;
+             /*     String code = silkPrintMessage.getSilkCarCode() ;
                   if(!ObjectUtils.isEmpty(code)){
                       g2d.drawString(code.substring(code.length()-3),startX1,y2);
 
-                  }
+                  }*/
               }
             if(i%4==0){
        /*         if(silkPrintMessage.getBlank()!=null&&silkPrintMessage.getBlank()){
@@ -107,7 +107,7 @@ public class SilkPrintMessageAble implements Printable {
                 }else {
                     String code = silkPrintMessage.getSilkCarCode() ;
                     if(!ObjectUtils.isEmpty(code)){
-                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
+//                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
                     }
 
                 }
@@ -125,7 +125,7 @@ public class SilkPrintMessageAble implements Printable {
                     g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
                     g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
                     if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
-                        g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
+//                        g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
                     }
                 }else {
                     String code = silkPrintMessage.getSilkCarCode() ;
@@ -162,7 +162,7 @@ public class SilkPrintMessageAble implements Printable {
                 }else {
                     String code = silkPrintMessage.getSilkCarCode() ;
                     if(!ObjectUtils.isEmpty(code)){
-                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
+//                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
                     }
                 }
 
@@ -206,7 +206,7 @@ public class SilkPrintMessageAble implements Printable {
                 }else {
                     String code = silkPrintMessage.getSilkCarCode() ;
                     if(!ObjectUtils.isEmpty(code)){
-                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
+//                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
                     }
                 }
 
