@@ -10,6 +10,7 @@ import com.example.print.p.SilkPrintMessage;
 import com.example.print.print.vo.PrintSelectSilkBarCodesVo;
 import com.example.print.print.vo.YjPrintData;
 import com.example.print.print.vo.print.JsonsRootBean;
+import com.example.print.print.vo.print.Silkbarcodes;
 import com.example.print.utils.DateUtils;
 import com.example.print.utils.FileUtils;
 import com.example.print.utils.PrintUtil;
@@ -174,9 +175,9 @@ public class DoffService {
 //            List<SilkPrintMessage> printMessages = (List<SilkPrintMessage>) jjjj.getData();
 //            System.out.println( "***" +printMessages);
             List<SilkPrintMessage> printMessages = jjjj.getData();
-            if(ObjectUtils.isEmpty(printSelectSilkBarCodesVo.getPrinter())){
+            if (ObjectUtils.isEmpty(printSelectSilkBarCodesVo.getPrinter())) {
                 print(printMessages, FileUtils.readText("D:\\printService\\printMachine.txt").replaceAll("\n", ""));
-            }else {
+            } else {
                 print(printMessages, printSelectSilkBarCodesVo.getPrinter());
             }
 
@@ -186,7 +187,62 @@ public class DoffService {
     }
 
     public void printYjSilkPater(JsonsRootBean printData) {
+        List<SilkPrintMessage> printMessages = convertPrint(printData);
+        print(printMessages, FileUtils.readText("D:\\printService\\printMachine.txt").replaceAll("\n", ""));
+
         String s = new Gson().toJson(printData);
-        System.out.println("逸暻打印程序："+s);
+        System.out.println("逸暻打印程序：" + s);
+    }
+
+    private List<SilkPrintMessage> convertPrint(JsonsRootBean printData) {
+        List<SilkPrintMessage> silkPrintMessageList = new ArrayList<>();
+        List<Silkbarcodes> silkbarcodes = printData.getSilkbarcodes();
+        for (int i = 0; i < silkbarcodes.size(); i++) {
+            Silkbarcodes silkBarcode = silkbarcodes.get(i);
+            for (int j = 0; j < silkBarcode.getLinemachine().getSpindlenum(); j++) {
+                SilkPrintMessage message = new SilkPrintMessage();
+                message.setSpec(silkBarcode.getBatch().getSpec());
+                message.setBatchNo(silkBarcode.getBatch().getBatchno());
+                message.setClasses("");
+                message.setLineMachine(silkBarcode.getLinemachine().getLine().getName()+"-"+silkBarcode.getLinemachine().getItem());
+                message.setDoffDate(getStr(silkBarcode.getCodedate()));
+                message.setDoffNo(silkBarcode.getDoffingnum());
+                message.setQrCode(singleAddZero(j+1,silkBarcode.getCode(),silkBarcode.getBatch().getWorkshop().getCode()));
+                message.setSpindleNum((j+1)+"");
+                message.setSilkCarCode(silkBarcode.getCode());
+                message.setCls(silkBarcode.getBatch().getProduct().getName()); // 产品
+                message.setWhiteNight("");
+                silkPrintMessageList.add(message) ;
+            }
+        }
+
+        return silkPrintMessageList;
+    }
+
+    private String singleAddZero(int j, String code, String workShopCode) {
+//        j =
+        String str1 = String.format("%02d", j);
+        return code+str1+workShopCode;
+    }
+
+    public static void main(String[] args) {
+        int n = 9;
+
+        String str1 = String.format("%02d", n);
+
+        System.out.println(str1);
+    }
+    public Date longToDate(long dateLong){
+        Date date = new Date(dateLong);
+        return date;
+    }
+
+    public  String getStr(long date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(longToDate(date));
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+
+        String format1 = format.format(cal.getTime());
+        return format1;
     }
 }

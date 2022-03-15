@@ -26,12 +26,14 @@ public class SilkPrintMessageAble implements Printable {
         if (pageIndex > 0) {
             return NO_SUCH_PAGE;
         }
-        String team = FileUtils.readText("D:\\printService\\team.txt").replace("\n", "");
-        if(ObjectUtils.isEmpty(team)){
+//        String team = FileUtils.readText("D:\\printService\\team.txt").replace("\n", "");
+
+     /*   if(ObjectUtils.isEmpty(team)){
             team= ""   ;
         }else {
             team = getHanTeam(team) ;
-        }
+        }*/
+
         Graphics2D g2d = (Graphics2D) graphics;
         g2d.setColor(Color.BLACK);//设置颜色
         //模式  字体   字体大小
@@ -63,9 +65,12 @@ public class SilkPrintMessageAble implements Printable {
 //        int startY4=65;
         int startY4=61;
         for(int i=0;i<silkPrintMessageList.size();i++){
+
             SilkPrintMessage silkPrintMessage = silkPrintMessageList.get(i);
+            String product = "";
+            product = getHanTeam(silkPrintMessage.getCls()) ;
             if(!ObjectUtils.isEmpty(silkPrintMessage.getCls())){
-                team = silkPrintMessage.getCls() ;
+                product = silkPrintMessage.getCls() ;
             }
               if(i==silkPrintMessageList.size()-1){
                   String code = silkPrintMessage.getSilkCarCode() ;
@@ -89,7 +94,7 @@ public class SilkPrintMessageAble implements Printable {
                 }*/
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage ,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+                    g2d.drawString(product+"/"+getNightWhite(silkPrintMessage ,product)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
@@ -111,7 +116,7 @@ public class SilkPrintMessageAble implements Printable {
             }else if(i%4==1){
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+                    g2d.drawString(product+"/"+getNightWhite(silkPrintMessage,product)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
@@ -143,7 +148,7 @@ public class SilkPrintMessageAble implements Printable {
             }else if(i%4==2){
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+                    g2d.drawString(product+"/"+getNightWhite(silkPrintMessage,product)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
@@ -187,7 +192,7 @@ public class SilkPrintMessageAble implements Printable {
      }*/
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage ,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+                    g2d.drawString(product+"/"+getNightWhite(silkPrintMessage ,product)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
@@ -219,18 +224,19 @@ public class SilkPrintMessageAble implements Printable {
     }
 
     private String setSpindleNum(SilkPrintMessage silk) {
-        if("C1C2C3C4".contains(silk.getLineMachine().split("-")[0])){
+ /*       if("C1C2C3C4".contains(silk.getLineMachine().split("-")[0])){
             if(silk.getLineMachine().contains("L")){
                 return "A"+silk.getSpindleNum() ;
             }else {
                 return "B"+silk.getSpindleNum() ;
             }
-        }
+        }*/
         return silk.getSpindleNum();
     }
 
     private String getNightWhite(SilkPrintMessage qrCode,String team) {
-        if(!ObjectUtils.isEmpty(qrCode.getWhiteNight())){
+        return  "" ;
+ /*       if(!ObjectUtils.isEmpty(qrCode.getWhiteNight())){
              return  "1".equals(qrCode.getWhiteNight())?"白":"夜";
         }
         if(ObjectUtils.isEmpty(qrCode.getQrCode())){
@@ -244,11 +250,11 @@ public class SilkPrintMessageAble implements Printable {
                 return  a.equals("1")?"白/":"夜/" ;
             }
 
-        }
+        }*/
     }
 
     private String getHanTeam(String team) {
-        String hanTeam = "" ;
+        /*String hanTeam = "" ;
         switch (team){
             case "1" :
                 hanTeam = "甲" ;
@@ -274,8 +280,8 @@ public class SilkPrintMessageAble implements Printable {
                     return  hanTeam ;
                 }
                 break;
-        }
-        return hanTeam;
+        }*/
+        return team;
     }
 
 

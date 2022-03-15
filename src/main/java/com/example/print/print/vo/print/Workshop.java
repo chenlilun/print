@@ -13,6 +13,7 @@ public class Workshop {
 
     private String id;
     private String name;
+    private String code;
     public void setId(String id) {
          this.id = id;
      }
