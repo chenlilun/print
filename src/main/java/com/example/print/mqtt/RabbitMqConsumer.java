@@ -18,7 +18,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -42,8 +41,6 @@ public class RabbitMqConsumer {
 
     //日志
     private Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
-//    public static final String queue = FileUtils.readText("D:\\printService\\printMachine.txt").replace("\n", "");
-
 //    @RabbitListener(queues = "${spring.rabbitmq.listener.queues}")
     @RabbitListener(queues = RabbitConfig.QUEUE)
     public void consumer(String content, Channel channel, Message message) {
@@ -79,12 +76,6 @@ public class RabbitMqConsumer {
                 doffService.printCarSilkCode(jjjj.getData().silkCarOnlines);
                 System.out.println("打印完毕===============");
             }
-
-//        try {
-//            channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         } finally {
             try {
                 channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);

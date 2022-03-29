@@ -3,6 +3,8 @@ package com.example.print.print;
 import com.example.print.bean.MqttBean;
 import com.example.print.bean.PrintData;
 import com.example.print.bean.SilkCarOnline;
+import com.example.print.bean.User;
+import com.example.print.mapper.UserMapper;
 import com.example.print.okhttp.OkHttpUtils;
 import com.example.print.print.vo.PrintSelectSilkBarCodesVo;
 import com.example.print.service.DoffService;
@@ -18,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,13 +36,16 @@ public class MyControllor {
     private static final Logger log = LoggerFactory.getLogger(OkHttpUtils.class);
 //    @Autowired
 //    OkHttpUtils okHttpUtils ;
+@Resource
+private UserMapper userMapper;
     @GetMapping("/bb/{line}")
-    public String getBb(@PathVariable String line){
+    public      List<User> getBb(@PathVariable String line){
 //        String url = "http://www.baidu.com";
 //        System.out.println(okHttpUtils.httpGet(url));
         fileUtils.writeText("D:\\printService\\config.txt",line,false);
         log.error("url为null!");
-        return "bb" ;
+//        List<User> users = userMapper.selectList(null);
+        return null;
     }
 
     @GetMapping("/setTeam/{team}")
