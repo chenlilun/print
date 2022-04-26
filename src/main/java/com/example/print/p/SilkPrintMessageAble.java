@@ -42,9 +42,9 @@ public class SilkPrintMessageAble implements Printable {
         int startX=2;//第一列初始x值
         int dValue1=71  ;//列差值
 //        int startY1=6;//第一行初始Y值
-        int startY1=5;//第一行初始Y值
+        int startY1=6;//第一行初始Y值
 //        int startY2=14;//第二行Y值
-        int startY2=12;//第二行Y值
+        int startY2=13;//第二行Y值
 
         int startX2=41;//第二列X值
         int startX2Y2=48;//第二列X值
@@ -62,7 +62,7 @@ public class SilkPrintMessageAble implements Printable {
 //        int startYcode=25;//二维码Y
         int startYcode=23;//二维码Y
         int wh=33;//边长
-        int startX4=10;
+        int startX4=3;
         int startX2Add=5;
 //        int startY4=65;
         int startY4=61;
@@ -83,157 +83,57 @@ public class SilkPrintMessageAble implements Printable {
               }
 
             if(i%4==0){
-       /*         if(silkPrintMessage.getBlank()!=null&&silkPrintMessage.getBlank()){
-          *//*          g2d.drawString("",startX1+(dValue1*i),startY1);
-                    g2d.drawString("",startX1+(dValue1*i),startY2);
-                    g2d.drawString("",startX2+(dValue1*i),startY2);
-                    g2d.drawString("",startX1+(dValue1*i),startY3);
-                    g2d.drawString("",startX22+(dValue1*i),startY3);
-                    g2d.drawString("",startX23+(dValue1*i),startY3);
-                    g2d.drawImage(QRCodeUtil.getImage(""),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString("",startX4+(dValue1*i),startY4);*//*
-                }else {
-
-                }*/
-                if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
-                    g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(product,startX2Y2+(dValue1*i),startY1);
-                    g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
-                    g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
-                    g2d.drawString(silkPrintMessage.getDoffDate()+"/"+getNightWhite(silkPrintMessage ,product)+silkPrintMessage.getDoffNo(),startX1+(dValue1*i),startY3);
-                    g2d.drawString(setSpindleNum(silkPrintMessage),startX23+(dValue1*i),startY333);
-                    g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
-                    if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
-                        g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
-                    }
-                }else {
-                    String code = silkPrintMessage.getSilkCarCode() ;
-                    if(!ObjectUtils.isEmpty(code)){
-//                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
-                    }
-
-                }
-
-
+                composeAll(g2d, startX1, startX, dValue1, startY1, startY2, startX2, startX2Y2, startY3, startY333, startY33, startX23, startXcode, startYcode, wh, startX4, startX2Add, startY4, i, silkPrintMessage ,product);
             }else if(i%4==1){
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(product,startX2Y2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
-                    g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
-                    g2d.drawString(silkPrintMessage.getDoffDate()+"/"+getNightWhite(silkPrintMessage,product)+silkPrintMessage.getDoffNo(),startX1+(dValue1*i),startY3);
-//                    g2d.drawString(silkPrintMessage.getDoffNo(),startX2+(dValue1*i)+5,startY3);
-                    g2d.drawString(setSpindleNum(silkPrintMessage),startX23+(dValue1*i),startY333);
+                    g2d.drawString(silkPrintMessage.getDoffDate()+"/"+silkPrintMessage.getDoffNo(),startX1+(dValue1*i),startY3);
+                    g2d.drawString(product,startX23+(dValue1*i),startY333-10);
+                    g2d.drawString(silkPrintMessage.getLineMachine(),startX23+(dValue1*i),startY333-3);
+                    g2d.drawString(silkPrintMessage.getSpindleNum()+"",startX23+(dValue1*i),startY333+4);
+                    g2d.drawString(setSpindleNum(silkPrintMessage),startX23+(dValue1*i),startY333+11);
                     g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
                     g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
-                    if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
-//                        g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
-                    }
                 }else {
                     String code = silkPrintMessage.getSilkCarCode() ;
                     if(!ObjectUtils.isEmpty(code)){
                         g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
                     }
                 }
-
-  /*              if(silkPrintMessage.getBlank()!=null&&silkPrintMessage.getBlank()){
-           *//*         g2d.drawString("",startX1+(dValue1*i),startY1);
-                    g2d.drawString("",startX1+(dValue1*i),startY2);
-                    g2d.drawString("",startX2+(dValue1*i),startY2);
-                    g2d.drawString("",startX1+(dValue1*i),startY3);
-                    g2d.drawString("",startX22+(dValue1*i),startY3);
-                    g2d.drawString("",startX23+(dValue1*i),startY3);
-                    g2d.drawImage(QRCodeUtil.getImage(""),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString("",startX4+(dValue1*i),startY4);*//*
-                }else {
-          }*/
             }else if(i%4==2){
-                if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
-                    g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(product,startX2Y2+(dValue1*i),startY1);
-                    g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
-                    g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
-                    g2d.drawString(silkPrintMessage.getDoffDate()+"/"+getNightWhite(silkPrintMessage,product)+silkPrintMessage.getDoffNo(),startX1+(dValue1*i),startY3);
-//                    g2d.drawString(silkPrintMessage.getDoffNo(),startX2+(dValue1*i)+5,startY3);
-                    g2d.drawString(setSpindleNum(silkPrintMessage),startX23+(dValue1*i),startY333);
-                    g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
-                    if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
-                        g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
-                    }
-                }else {
-                    String code = silkPrintMessage.getSilkCarCode() ;
-                    if(!ObjectUtils.isEmpty(code)){
-//                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
-                    }
-                }
-
-
-    /*            if(silkPrintMessage.getBlank()!=null&&silkPrintMessage.getBlank()){
-*//*                    g2d.drawString("",startX1+(dValue1*i),startY1);
-                    g2d.drawString("",startX1+(dValue1*i),startY2);
-                    g2d.drawString("",startX2+(dValue1*i),startY2);
-                    g2d.drawString("",startX1+(dValue1*i),startY3);
-                    g2d.drawString("",startX22+(dValue1*i),startY3);
-                    g2d.drawString("",startX23+(dValue1*i),startY3);
-                    g2d.drawImage(QRCodeUtil.getImage(""),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString("",startX4+(dValue1*i),startY4);*//*
-                }else {
-        }*/
+                composeAll(g2d, startX1, startX, dValue1, startY1, startY2, startX2, startX2Y2, startY3, startY333, startY33, startX23, startXcode, startYcode, wh, startX4, startX2Add, startY4, i, silkPrintMessage,product);
             }else{
-/*                if(silkPrintMessage.getBlank()!=null&&silkPrintMessage.getBlank()){
-             *//*       g2d.drawString("",startX1+(dValue1*i),startY1);
-                    g2d.drawString("",startX1+(dValue1*i),startY2);
-                    g2d.drawString("",startX2+(dValue1*i),startY2);
-                    g2d.drawString("",startX1+(dValue1*i),startY3);
-                    g2d.drawString("",startX22+(dValue1*i),startY3);
-                    g2d.drawString("",startX23+(dValue1*i),startY3);
-                    g2d.drawImage(QRCodeUtil.getImage(""),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString("",startX4+(dValue1*i),startY4);*//*
-                }else {
-     }*/
-                if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
-                    g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(product,startX2Y2+(dValue1*i),startY1);
-                    g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
-                    g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
-                    g2d.drawString(silkPrintMessage.getDoffDate()+"/"+getNightWhite(silkPrintMessage ,product)+silkPrintMessage.getDoffNo(),startX1+(dValue1*i),startY3);
-//                    g2d.drawString(silkPrintMessage.getDoffNo(),startX2+(dValue1*i)+5,startY3);
-                    g2d.drawString(setSpindleNum(silkPrintMessage),startX23+(dValue1*i),startY333);
-                    g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
-                    if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
-                        g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
-                    }
-                }else {
-                    String code = silkPrintMessage.getSilkCarCode() ;
-                    if(!ObjectUtils.isEmpty(code)){
-//                        g2d.drawString(code.substring(code.length()-3),startX1+(dValue1*i),startY3);
-                    }
-                }
+                composeAll(g2d, startX1, startX, dValue1, startY1, startY2, startX2, startX2Y2, startY3, startY333, startY33, startX23, startXcode, startYcode, wh, startX4, startX2Add, startY4, i, silkPrintMessage,product);
+            }
+        }
+       return 0;
+    }
+
+    private void composeAll(Graphics2D g2d, int startX1, int startX, int dValue1, int startY1, int startY2, int startX2, int startX2Y2, int startY3, int startY333, int startY33, int startX23, int startXcode, int startYcode, int wh, int startX4, int startX2Add, int startY4, int i, SilkPrintMessage silkPrintMessage,String product) {
+        if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
+            g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
+            g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
+            g2d.drawString(silkPrintMessage.getDoffDate()+"/"+silkPrintMessage.getDoffNo(),startX1+(dValue1*i),startY3);
+            g2d.drawString(product,startX23+(dValue1*i),startY333-10);  //产品
+            g2d.drawString(silkPrintMessage.getLineMachine(),startX23+(dValue1*i),startY333-3);
+            g2d.drawString(silkPrintMessage.getSpindleNum()+"",startX23+(dValue1*i),startY333+4);
+            g2d.drawString(setSpindleNum(silkPrintMessage) ,startX23+(dValue1*i),startY333+11);
+            g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
+            g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
+            if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
+                g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
+            }
+        }else {
+            String code = silkPrintMessage.getSilkCarCode() ;
+            if(!ObjectUtils.isEmpty(code)){
 
             }
-
         }
-
-
-//        g2d.drawString("zhangsan1",6,6);
-//        g2d.drawString("zhangsan2",76,6);
-//        g2d.drawString("zhangsan3",146,6);
-//        g2d.drawString("zhangsan4",216,6);
-
-        return 0;
     }
 
     private String setSpindleNum(SilkPrintMessage silk) {
- /*       if("C1C2C3C4".contains(silk.getLineMachine().split("-")[0])){
-            if(silk.getLineMachine().contains("L")){
-                return "A"+silk.getSpindleNum() ;
-            }else {
-                return "B"+silk.getSpindleNum() ;
-            }
-        }*/
+
         return int2chineseNum(Integer.valueOf(silk.getSpindleNum()));
     }
     public static String int2chineseNum(int src) {
@@ -248,7 +148,7 @@ public class SilkPrintMessageAble implements Printable {
         }
         return dst.replaceAll("零[千百十]", "零").replaceAll("零+万", "万")
                 .replaceAll("零+亿", "亿").replaceAll("亿万", "亿零")
-                .replaceAll("零+", "零").replaceAll("零$", "");
+                .replaceAll("零+", "零").replaceAll("零$", "").replaceAll("一十", "十");
     }
     private String getNightWhite(SilkPrintMessage qrCode,String team) {
         return  "" ;
