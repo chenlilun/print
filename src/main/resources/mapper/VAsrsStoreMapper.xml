@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsStoreMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsStore">
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="STOREID" property="storeid" />
+        <result column="STORENAME" property="storename" />
+        <result column="MEMO" property="memo" />
+        <result column="C_ID" property="cId" />
+        <result column="rackstoredef_id" property="rackstoredefId" />
+        <result column="rackstoreid" property="rackstoreid" />
+        <result column="rackstoredefname" property="rackstoredefname" />
+        <result column="rackstoredefmemo" property="rackstoredefmemo" />
+        <result column="CID" property="cid" />
+        <result column="rackpalletid" property="rackpalletid" />
+        <result column="AISLE" property="aisle" />
+        <result column="LAYER" property="layer" />
+        <result column="RANK" property="rank" />
+        <result column="ROWW" property="roww" />
+        <result column="rackstatus" property="rackstatus" />
+        <result column="RACKSTATUSNAME" property="rackstatusname" />
+        <result column="rackcellcode" property="rackcellcode" />
+        <result column="PALLETID" property="palletid" />
+        <result column="TrayNO" property="TrayNO" />
+        <result column="ProDate" property="ProDate" />
+        <result column="CompanyID" property="CompanyID" />
+        <result column="ProductID" property="ProductID" />
+        <result column="PieceNumber" property="PieceNumber" />
+        <result column="NWeight" property="NWeight" />
+        <result column="RWeight" property="RWeight" />
+        <result column="ColorID" property="ColorID" />
+        <result column="StockID" property="StockID" />
+        <result column="UnitID" property="UnitID" />
+        <result column="OwnerCompanyID" property="OwnerCompanyID" />
+        <result column="InStockType" property="InStockType" />
+        <result column="Status" property="Status" />
+        <result column="WriteTime" property="WriteTime" />
+        <result column="Position" property="Position" />
+        <result column="TunnelNO" property="TunnelNO" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="YarnName" property="YarnName" />
+        <result column="TwistWayName" property="TwistWayName" />
+        <result column="PolishName" property="PolishName" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="ColorName" property="ColorName" />
+        <result column="UnitName" property="UnitName" />
+        <result column="StockName" property="StockName" />
+        <result column="PeriodTypeName" property="PeriodTypeName" />
+        <result column="InoutTypeName" property="InoutTypeName" />
+        <result column="FIRSTINTIME" property="firstintime" />
+        <result column="LASTOUTTIME" property="lastouttime" />
+        <result column="STORESTATUS" property="storestatus" />
+        <result column="CHECKFLAG" property="checkflag" />
+        <result column="CHECKTIME" property="checktime" />
+        <result column="ID" property="id" />
+        <result column="MachineID" property="MachineID" />
+        <result column="CanBlendMch" property="CanBlendMch" />
+        <result column="BarCodeDate" property="BarCodeDate" />
+        <result column="Barcode" property="Barcode" />
+        <result column="PNUM" property="pnum" />
+        <result column="Charg" property="Charg" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Product_Type" property="productType" />
+        <result column="MID" property="mid" />
+        <result column="PRODTIME" property="prodtime" />
+        <result column="MNAME" property="mname" />
+        <result column="MSpecs" property="MSpecs" />
+        <result column="WareHouse" property="WareHouse" />
+        <result column="TradeName" property="TradeName" />
+        <result column="ProductName" property="ProductName" />
+        <result column="MSTATUS" property="mstatus" />
+        <result column="Box_Type" property="boxType" />
+    </resultMap>
+
+</mapper>

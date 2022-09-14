@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsRackMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsRack">
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="storeid" property="storeid" />
+        <result column="STOREDEFNAME" property="storedefname" />
+        <result column="STOREDEFMEMO" property="storedefmemo" />
+        <result column="CID" property="cid" />
+        <result column="PALLETID" property="palletid" />
+        <result column="AISLE" property="aisle" />
+        <result column="LAYER" property="layer" />
+        <result column="RANK" property="rank" />
+        <result column="ROWW" property="roww" />
+        <result column="STATUS" property="status" />
+        <result column="RACKSTATUSNAME" property="rackstatusname" />
+        <result column="RACKSTATUSMEMO" property="rackstatusmemo" />
+        <result column="LASTTIME" property="lasttime" />
+        <result column="PLATTYPE" property="plattype" />
+        <result column="PLATTYPENAME" property="plattypename" />
+        <result column="PLATTYPEMEMO" property="plattypememo" />
+        <result column="CELLCLASS" property="cellclass" />
+        <result column="CELLCLASSNAME" property="cellclassname" />
+        <result column="CELLCLASSMEMO" property="cellclassmemo" />
+        <result column="SPALLETID" property="spalletid" />
+        <result column="LPALLETID" property="lpalletid" />
+        <result column="CPALLETID" property="cpalletid" />
+        <result column="CHECKFLAG" property="checkflag" />
+        <result column="CHECKTIME" property="checktime" />
+        <result column="MEMO" property="memo" />
+        <result column="ERP_ID" property="erpId" />
+        <result column="ISDEFAULT" property="isdefault" />
+        <result column="ISSYS" property="issys" />
+        <result column="ISINUSED" property="isinused" />
+        <result column="ID" property="id" />
+        <result column="CELLCODE" property="cellcode" />
+        <result column="AREA_ID" property="areaId" />
+        <result column="AREAID" property="areaid" />
+        <result column="AREANAME" property="areaname" />
+        <result column="plattypedefid" property="plattypedefid" />
+        <result column="plattypedefname" property="plattypedefname" />
+    </resultMap>
+
+</mapper>

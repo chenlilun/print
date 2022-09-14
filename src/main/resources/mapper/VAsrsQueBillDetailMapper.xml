@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueBillDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueBillDetail">
+        <result column="单据号" property="单据号" />
+        <result column="序号" property="序号" />
+        <result column="物料代号" property="物料代号" />
+        <result column="计划数量" property="计划数量" />
+        <result column="计划重量" property="计划重量" />
+        <result column="数量" property="数量" />
+        <result column="重量" property="重量" />
+        <result column="完成数量" property="完成数量" />
+        <result column="完成重量" property="完成重量" />
+        <result column="产品状态号" property="产品状态号" />
+        <result column="产品状态" property="产品状态" />
+        <result column="产品类别号" property="产品类别号" />
+        <result column="产品类别" property="产品类别" />
+        <result column="规格索引" property="规格索引" />
+        <result column="供应商索引" property="供应商索引" />
+        <result column="供应商代号" property="供应商代号" />
+        <result column="供应商" property="供应商" />
+        <result column="客户索引" property="客户索引" />
+        <result column="客户代号" property="客户代号" />
+        <result column="客户" property="客户" />
+        <result column="批次定义索引" property="批次定义索引" />
+        <result column="入库单据索引" property="入库单据索引" />
+        <result column="单据表头索引" property="单据表头索引" />
+        <result column="打印时间" property="打印时间" />
+        <result column="出库班次" property="出库班次" />
+        <result column="表体备注" property="表体备注" />
+        <result column="装车门号" property="装车门号" />
+        <result column="表体状态号" property="表体状态号" />
+        <result column="表体状态名称" property="表体状态名称" />
+        <result column="车牌号" property="车牌号" />
+        <result column="司机名称" property="司机名称" />
+        <result column="创建时间" property="创建时间" />
+        <result column="创建用户" property="创建用户" />
+        <result column="索引" property="索引" />
+        <result column="批号" property="批号" />
+        <result column="贸易类型" property="贸易类型" />
+        <result column="生产类型" property="生产类型" />
+        <result column="物料规格" property="物料规格" />
+        <result column="等级" property="等级" />
+        <result column="SAP库位号" property="SAP库位号" />
+        <result column="物料名称" property="物料名称" />
+        <result column="纸箱类型" property="纸箱类型" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsStoreBoxMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsStoreBox">
+        <result column="Barcode" property="Barcode" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="C_ID" property="cId" />
+        <result column="PALLETID" property="palletid" />
+        <result column="MID" property="mid" />
+        <result column="MNAME" property="mname" />
+        <result column="MSpecs" property="MSpecs" />
+        <result column="Charg" property="Charg" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Product_Type" property="productType" />
+        <result column="CHARG_D" property="chargD" />
+        <result column="SHIFT" property="shift" />
+        <result column="NET_WEIGHT" property="netWeight" />
+        <result column="GROSS_WEIGHT" property="grossWeight" />
+        <result column="BOX_CODE" property="boxCode" />
+        <result column="YARN" property="yarn" />
+        <result column="FIXBZ" property="fixbz" />
+        <result column="DIRECT" property="direct" />
+        <result column="DealFlag" property="DealFlag" />
+        <result column="STORE_ID" property="storeId" />
+        <result column="BOX_NO" property="boxNo" />
+        <result column="BUNDLE_NUM" property="bundleNum" />
+        <result column="OUTFLOW_ID" property="outflowId" />
+        <result column="ProDate" property="ProDate" />
+    </resultMap>
+
+</mapper>

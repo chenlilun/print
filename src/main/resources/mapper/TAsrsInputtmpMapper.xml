@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsInputtmpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsInputtmp">
+        <id column="ID" property="id" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="C_ID" property="cId" />
+        <result column="I_BILL_ID" property="iBillId" />
+        <result column="Aisle" property="Aisle" />
+        <result column="IOCLASS_ID" property="ioclassId" />
+        <result column="PALLETID" property="palletid" />
+        <result column="INTARNO" property="intarno" />
+        <result column="INPUTTMPSTATUS" property="inputtmpstatus" />
+        <result column="CM_Flag" property="cmFlag" />
+        <result column="WIndex" property="WIndex" />
+        <result column="wStatus" property="wStatus" />
+        <result column="STATIONID" property="stationid" />
+        <result column="TrayNO" property="TrayNO" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="PRODTIME" property="prodtime" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="MID" property="mid" />
+        <result column="MNAME" property="mname" />
+        <result column="MSpecs" property="MSpecs" />
+        <result column="Barcode" property="Barcode" />
+        <result column="Charg" property="Charg" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Product_Type" property="productType" />
+        <result column="PieceNumber" property="PieceNumber" />
+        <result column="RWeight" property="RWeight" />
+        <result column="NWeight" property="NWeight" />
+        <result column="WareHouse" property="WareHouse" />
+        <result column="ProDate" property="ProDate" />
+        <result column="CompanyID" property="CompanyID" />
+        <result column="Status" property="Status" />
+        <result column="YarnName" property="YarnName" />
+        <result column="TwistWayName" property="TwistWayName" />
+        <result column="LTime" property="LTime" />
+        <result column="Box_Type" property="boxType" />
+    </resultMap>
+
+</mapper>

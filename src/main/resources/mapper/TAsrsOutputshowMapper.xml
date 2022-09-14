@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsOutputshowMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsOutputshow">
+        <id column="ID" property="id" />
+        <result column="BILL_ID" property="billId" />
+        <result column="STORE_ID" property="storeId" />
+        <result column="GATENO" property="gateno" />
+        <result column="OUTNUM" property="outnum" />
+        <result column="OUTWEIGHT" property="outweight" />
+        <result column="BILLNO" property="billno" />
+        <result column="DRIVERNAME" property="drivername" />
+        <result column="C_ID" property="cId" />
+        <result column="OUTCUSTOMER_ID" property="outcustomerId" />
+        <result column="PALLETID" property="palletid" />
+        <result column="MEMO" property="memo" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="Barcode" property="Barcode" />
+        <result column="PieceNumber" property="PieceNumber" />
+        <result column="NWeight" property="NWeight" />
+        <result column="RWeight" property="RWeight" />
+        <result column="ProDate" property="ProDate" />
+        <result column="CompanyID" property="CompanyID" />
+        <result column="VehicleNo" property="VehicleNo" />
+        <result column="BackNum" property="BackNum" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueStoreMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueStore">
+        <result column="库房索引" property="库房索引" />
+        <result column="库房代号" property="库房代号" />
+        <result column="库房" property="库房" />
+        <result column="库房备注" property="库房备注" />
+        <result column="货位索引" property="货位索引" />
+        <result column="货位库房索引" property="货位库房索引" />
+        <result column="货位库房号" property="货位库房号" />
+        <result column="货位库房" property="货位库房" />
+        <result column="货位库房备注" property="货位库房备注" />
+        <result column="货位代号" property="货位代号" />
+        <result column="货位托盘号" property="货位托盘号" />
+        <result column="巷道" property="巷道" />
+        <result column="层" property="层" />
+        <result column="列" property="列" />
+        <result column="排" property="排" />
+        <result column="货位状态号" property="货位状态号" />
+        <result column="货位状态" property="货位状态" />
+        <result column="货位代码" property="货位代码" />
+        <result column="托盘号" property="托盘号" />
+        <result column="流水号" property="流水号" />
+        <result column="生产日期" property="生产日期" />
+        <result column="公司ID" property="公司ID" />
+        <result column="货号ID" property="货号ID" />
+        <result column="箱数" property="箱数" />
+        <result column="净重" property="净重" />
+        <result column="毛重" property="毛重" />
+        <result column="颜色ID" property="颜色ID" />
+        <result column="仓库ID" property="仓库ID" />
+        <result column="单位ID" property="单位ID" />
+        <result column="公司期别ID" property="公司期别ID" />
+        <result column="入库类型" property="入库类型" />
+        <result column="状态" property="状态" />
+        <result column="托盘日期" property="托盘日期" />
+        <result column="托盘位置" property="托盘位置" />
+        <result column="巷道号" property="巷道号" />
+        <result column="批号" property="批号" />
+        <result column="纱种" property="纱种" />
+        <result column="捻向" property="捻向" />
+        <result column="光泽" property="光泽" />
+        <result column="纸管颜色" property="纸管颜色" />
+        <result column="等级" property="等级" />
+        <result column="单位" property="单位" />
+        <result column="仓库名称" property="仓库名称" />
+        <result column="公司期别" property="公司期别" />
+        <result column="入库类型名称" property="入库类型名称" />
+        <result column="入库时间" property="入库时间" />
+        <result column="最后出库时间" property="最后出库时间" />
+        <result column="库存状态号" property="库存状态号" />
+        <result column="需盘点" property="需盘点" />
+        <result column="盘点时间" property="盘点时间" />
+        <result column="索引" property="索引" />
+        <result column="机台ID" property="机台ID" />
+        <result column="混机台标志" property="混机台标志" />
+        <result column="生产日期1" property="生产日期1" />
+        <result column="码单条码" property="码单条码" />
+        <result column="只数" property="只数" />
+        <result column="码单号" property="码单号" />
+        <result column="贸易类型" property="贸易类型" />
+        <result column="生产类型" property="生产类型" />
+        <result column="物料代码" property="物料代码" />
+        <result column="生产时间" property="生产时间" />
+        <result column="物料描述" property="物料描述" />
+        <result column="物料规格" property="物料规格" />
+        <result column="SAP库位号" property="SAP库位号" />
+        <result column="纸箱类型" property="纸箱类型" />
+    </resultMap>
+
+</mapper>

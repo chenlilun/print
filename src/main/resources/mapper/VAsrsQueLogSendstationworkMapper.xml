@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueLogSendstationworkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueLogSendstationwork">
+        <result column="时间" property="时间" />
+        <result column="入库站台" property="入库站台" />
+        <result column="去向" property="去向" />
+        <result column="命令值" property="命令值" />
+        <result column="托盘号" property="托盘号" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsWorkflowMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsWorkflow">
+        <result column="LTIME" property="ltime" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="storeid" property="storeid" />
+        <result column="storename" property="storename" />
+        <result column="memo" property="memo" />
+        <result column="STACKERID" property="stackerid" />
+        <result column="WORKTYPE" property="worktype" />
+        <result column="worktypename" property="worktypename" />
+        <result column="worktypememo" property="worktypememo" />
+        <result column="PALLETID" property="palletid" />
+        <result column="AISLE" property="aisle" />
+        <result column="SLAYER" property="slayer" />
+        <result column="SRANK" property="srank" />
+        <result column="SROW" property="srow" />
+        <result column="TAISLE" property="taisle" />
+        <result column="TLAYER" property="tlayer" />
+        <result column="TRANK" property="trank" />
+        <result column="TROW" property="trow" />
+        <result column="STATUS" property="status" />
+        <result column="workstatusname" property="workstatusname" />
+        <result column="workstatusmemo" property="workstatusmemo" />
+        <result column="STATIONID" property="stationid" />
+        <result column="DEVID" property="devid" />
+        <result column="STATIONNAME" property="stationname" />
+        <result column="stationstatus" property="stationstatus" />
+        <result column="STATUSNAME" property="statusname" />
+        <result column="TARGETNO" property="targetno" />
+        <result column="IOCLASS" property="ioclass" />
+        <result column="IOCLASSNAME" property="ioclassname" />
+        <result column="GATENO" property="gateno" />
+        <result column="WORKINDEX" property="workindex" />
+        <result column="DEALTIME" property="dealtime" />
+        <result column="ISLOCKED" property="islocked" />
+        <result column="YESNONAME" property="yesnoname" />
+        <result column="ORDERID" property="orderid" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="SENDTIME" property="sendtime" />
+        <result column="RUNTIME" property="runtime" />
+        <result column="USERID" property="userid" />
+        <result column="WORK_ID" property="workId" />
+        <result column="ID" property="id" />
+    </resultMap>
+
+</mapper>

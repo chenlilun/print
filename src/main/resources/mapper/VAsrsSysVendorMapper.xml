@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsSysVendorMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsSysVendor">
+        <result column="vendorid" property="vendorid" />
+        <result column="vendorname" property="vendorname" />
+        <result column="memo" property="memo" />
+        <result column="isinused" property="isinused" />
+        <result column="statusname" property="statusname" />
+        <result column="issys" property="issys" />
+        <result column="yesnoname" property="yesnoname" />
+        <result column="createtime" property="createtime" />
+        <result column="userid" property="userid" />
+        <result column="id" property="id" />
+    </resultMap>
+
+</mapper>

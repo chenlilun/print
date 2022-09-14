@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsLonghandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsLonghand">
+        <result column="LTIME" property="ltime" />
+        <result column="DEVNO" property="devno" />
+        <result column="ACODE" property="acode" />
+        <result column="ACONTENT" property="acontent" />
+        <result column="CID" property="cid" />
+        <result column="PALLETID" property="palletid" />
+        <result column="MEMO" property="memo" />
+        <result column="DEALED" property="dealed" />
+        <result column="DETAIL" property="detail" />
+        <result column="PALLETCODE" property="palletcode" />
+        <result column="ENDTIME" property="endtime" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.PbcatedtMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.Pbcatedt">
+        <result column="pbe_name" property="pbeName" />
+        <result column="pbe_edit" property="pbeEdit" />
+        <result column="pbe_type" property="pbeType" />
+        <result column="pbe_cntr" property="pbeCntr" />
+        <result column="pbe_seqn" property="pbeSeqn" />
+        <result column="pbe_flag" property="pbeFlag" />
+        <result column="pbe_work" property="pbeWork" />
+    </resultMap>
+
+</mapper>

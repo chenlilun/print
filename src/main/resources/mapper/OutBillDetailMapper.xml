@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.OutBillDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.OutBillDetail">
+        <result column="BILLHEAD_ID" property="billheadId" />
+        <result column="BILLID" property="billid" />
+        <result column="MATERIAL" property="material" />
+        <result column="NUM" property="num" />
+        <result column="WEIGHT" property="weight" />
+        <result column="BATCH" property="batch" />
+        <result column="SPEC" property="spec" />
+        <result column="GRADE" property="grade" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Box_Type" property="boxType" />
+        <result column="SAP_STORAGE" property="sapStorage" />
+        <result column="STATUS" property="status" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="ID" property="id" />
+    </resultMap>
+
+</mapper>

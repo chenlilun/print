@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsMatmspeciesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsMatmspecies">
+        <result column="MSPECI" property="mspeci" />
+        <result column="MSPECINAME" property="mspeciname" />
+        <result column="WEIGHT" property="weight" />
+        <result column="MEMO" property="memo" />
+        <result column="ISINUSED" property="isinused" />
+        <result column="ISSYS" property="issys" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="USERID" property="userid" />
+        <result column="ID" property="id" />
+        <result column="M_ID" property="mId" />
+        <result column="MSPECIDEF_ID" property="mspecidefId" />
+        <result column="MID" property="mid" />
+        <result column="MATNAME" property="matname" />
+        <result column="BARCODE" property="barcode" />
+    </resultMap>
+
+</mapper>

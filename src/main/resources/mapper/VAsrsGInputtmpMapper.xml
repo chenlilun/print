@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsGInputtmpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsGInputtmp">
+        <result column="C_ID" property="cId" />
+        <result column="PALLETID" property="palletid" />
+        <result column="Grade" property="Grade" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="MachineID" property="MachineID" />
+        <result column="CanBlendMch" property="CanBlendMch" />
+        <result column="BarCodeDate" property="BarCodeDate" />
+        <result column="Status" property="Status" />
+    </resultMap>
+
+</mapper>

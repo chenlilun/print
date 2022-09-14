@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsChecktmpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsChecktmp">
+        <result column="BILLNO" property="billno" />
+        <result column="M_ID" property="mId" />
+        <result column="C_ID" property="cId" />
+        <result column="PALLETID" property="palletid" />
+        <result column="SPALLETID" property="spalletid" />
+        <result column="XPALLETID" property="xpalletid" />
+        <result column="NUM" property="num" />
+        <result column="REALNUM" property="realnum" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="STATUS" property="status" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="CHECKCLASS" property="checkclass" />
+    </resultMap>
+
+</mapper>

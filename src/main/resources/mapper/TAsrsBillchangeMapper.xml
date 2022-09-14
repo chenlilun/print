@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsBillchangeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsBillchange">
+        <result column="LTIME" property="ltime" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="TRANTYPE" property="trantype" />
+        <result column="BILLID" property="billid" />
+        <result column="C_ID" property="cId" />
+        <result column="PALLETID" property="palletid" />
+        <result column="OLD_M_ID" property="oldMId" />
+        <result column="NEW_M_ID" property="newMId" />
+        <result column="OLD_NUM" property="oldNum" />
+        <result column="OLD_SWEIGHT" property="oldSweight" />
+        <result column="NEW_NUM" property="newNum" />
+        <result column="NEW_SWEIGHT" property="newSweight" />
+        <result column="INTIME" property="intime" />
+        <result column="OUTTIME" property="outtime" />
+        <result column="OLD_MSPECIDEF_ID" property="oldMspecidefId" />
+        <result column="NEW_MSPECIDEF_ID" property="newMspecidefId" />
+        <result column="OLD_OUTCUSTOMER_ID" property="oldOutcustomerId" />
+        <result column="NEW_OUTCUSTOMER_ID" property="newOutcustomerId" />
+        <result column="MEMO" property="memo" />
+        <result column="IOCLASS_ID" property="ioclassId" />
+        <result column="FIRSTINTIME" property="firstintime" />
+        <result column="LASTOUTTIME" property="lastouttime" />
+        <result column="REC_ID" property="recId" />
+        <result column="USERID" property="userid" />
+        <result column="ID" property="id" />
+        <result column="BillID_T" property="billidT" />
+        <result column="New_PalletID" property="newPalletid" />
+    </resultMap>
+
+</mapper>

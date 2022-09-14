@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueDevStoreCanusedMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueDevStoreCanused">
+        <result column="货位代码" property="货位代码" />
+        <result column="货位状态" property="货位状态" />
+        <result column="托盘号" property="托盘号" />
+        <result column="码单号" property="码单号" />
+        <result column="箱数" property="箱数" />
+        <result column="批号" property="批号" />
+        <result column="等级" property="等级" />
+        <result column="物料代码" property="物料代码" />
+        <result column="物料规格" property="物料规格" />
+        <result column="码单条码" property="码单条码" />
+        <result column="生产日期" property="生产日期" />
+        <result column="贸易类型" property="贸易类型" />
+        <result column="生产类型" property="生产类型" />
+        <result column="SAP库位号" property="SAP库位号" />
+        <result column="生产时间" property="生产时间" />
+        <result column="净重" property="净重" />
+        <result column="毛重" property="毛重" />
+        <result column="库房名称" property="库房名称" />
+        <result column="物料描述" property="物料描述" />
+        <result column="最早入库时间" property="最早入库时间" />
+        <result column="最后出库时间" property="最后出库时间" />
+        <result column="库存索引" property="库存索引" />
+        <result column="纸箱类型" property="纸箱类型" />
+        <result column="出库封闭" property="出库封闭" />
+    </resultMap>
+
+</mapper>

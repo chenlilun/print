@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsSysListMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsSysList">
+        <result column="ListDate" property="ListDate" />
+        <result column="ID" property="id" />
+        <result column="moneytimebefore" property="moneytimebefore" />
+        <result column="moneytime_flow_before" property="moneytimeFlowBefore" />
+        <result column="moneytime_flow" property="moneytimeFlow" />
+        <result column="monthcarrytime" property="monthcarrytime" />
+        <result column="ListDateOut" property="ListDateOut" />
+        <result column="ListDateIN" property="ListDateIN" />
+    </resultMap>
+
+</mapper>

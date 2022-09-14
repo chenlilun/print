@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TWmsBillMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TWmsBill">
+        <result column="BILLNO" property="billno" />
+        <result column="dlvrNo" property="dlvrNo" />
+        <result column="itemNo" property="itemNo" />
+        <result column="customerNo" property="customerNo" />
+        <result column="customerName" property="customerName" />
+        <result column="plantCd" property="plantCd" />
+        <result column="whsCd" property="whsCd" />
+        <result column="shpCd" property="shpCd" />
+        <result column="Material" property="Material" />
+        <result column="MatName" property="MatName" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="GradeName" property="GradeName" />
+        <result column="SSPECI" property="sspeci" />
+        <result column="immediate" property="immediate" />
+        <result column="mode" property="mode" />
+        <result column="saleType" property="saleType" />
+        <result column="packageType" property="packageType" />
+        <result column="palletType" property="palletType" />
+        <result column="netWeight" property="netWeight" />
+        <result column="count" property="count" />
+        <result column="produceDate" property="produceDate" />
+        <result column="vehicleNo" property="vehicleNo" />
+        <result column="MachineNo" property="MachineNo" />
+        <result column="WareHouse" property="WareHouse" />
+    </resultMap>
+
+</mapper>

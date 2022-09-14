@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueWorkflowMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueWorkflow">
+        <result column="库房索引" property="库房索引" />
+        <result column="时间" property="时间" />
+        <result column="库房号" property="库房号" />
+        <result column="库房名称" property="库房名称" />
+        <result column="库房备注" property="库房备注" />
+        <result column="堆垛机号" property="堆垛机号" />
+        <result column="作业类型号" property="作业类型号" />
+        <result column="作业类型" property="作业类型" />
+        <result column="作业类型备注" property="作业类型备注" />
+        <result column="托盘号" property="托盘号" />
+        <result column="巷道" property="巷道" />
+        <result column="起始层" property="起始层" />
+        <result column="起始列" property="起始列" />
+        <result column="起始排" property="起始排" />
+        <result column="目的巷道" property="目的巷道" />
+        <result column="目的层" property="目的层" />
+        <result column="目的列" property="目的列" />
+        <result column="目的排" property="目的排" />
+        <result column="作业状态号" property="作业状态号" />
+        <result column="作业状态" property="作业状态" />
+        <result column="作业状态备注" property="作业状态备注" />
+        <result column="站台号" property="站台号" />
+        <result column="设备号" property="设备号" />
+        <result column="站台名称" property="站台名称" />
+        <result column="站台状态号" property="站台状态号" />
+        <result column="站台状态" property="站台状态" />
+        <result column="门号" property="门号" />
+        <result column="事务代号" property="事务代号" />
+        <result column="事务名称" property="事务名称" />
+        <result column="去向号" property="去向号" />
+        <result column="作业索引号" property="作业索引号" />
+        <result column="计划处理时间" property="计划处理时间" />
+        <result column="锁定" property="锁定" />
+        <result column="是否锁定" property="是否锁定" />
+        <result column="排序号" property="排序号" />
+        <result column="创建时间" property="创建时间" />
+        <result column="发送时间" property="发送时间" />
+        <result column="执行时间" property="执行时间" />
+        <result column="用户代号" property="用户代号" />
+        <result column="作业索引" property="作业索引" />
+        <result column="索引" property="索引" />
+    </resultMap>
+
+</mapper>

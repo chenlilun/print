@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsSysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsSysUser">
+        <result column="USERIDCODE" property="useridcode" />
+        <result column="USERID" property="userid" />
+        <result column="USERNAME" property="username" />
+        <result column="PASSWORD" property="password" />
+        <result column="DEPTID" property="deptid" />
+        <result column="MEMO" property="memo" />
+        <result column="ISINUSED" property="isinused" />
+        <result column="ISSYS" property="issys" />
+        <result column="ISSA" property="issa" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="ID" property="id" />
+    </resultMap>
+
+</mapper>

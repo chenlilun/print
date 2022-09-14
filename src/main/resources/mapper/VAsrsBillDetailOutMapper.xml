@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsBillDetailOutMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsBillDetailOut">
+        <result column="BILLID" property="billid" />
+        <result column="LISTINDEX" property="listindex" />
+        <result column="PLANNUM" property="plannum" />
+        <result column="NUM" property="num" />
+        <result column="WorkNum" property="WorkNum" />
+        <result column="FINISHNUM" property="finishnum" />
+        <result column="NeedNum" property="NeedNum" />
+        <result column="MSTATUS" property="mstatus" />
+        <result column="mstatusname" property="mstatusname" />
+        <result column="MCLASS" property="mclass" />
+        <result column="mclassname" property="mclassname" />
+        <result column="VENDORID" property="vendorid" />
+        <result column="VENDORNAME" property="vendorname" />
+        <result column="OUTCUSTOMER_ID" property="outcustomerId" />
+        <result column="CUSTOMERID" property="customerid" />
+        <result column="CUSTOMERNAME" property="customername" />
+        <result column="BATCHDEF_ID" property="batchdefId" />
+        <result column="I_BILL_ID" property="iBillId" />
+        <result column="BILLHEAD_ID" property="billheadId" />
+        <result column="PRINTTIME" property="printtime" />
+        <result column="OUTBC" property="outbc" />
+        <result column="MEMO" property="memo" />
+        <result column="GATENO" property="gateno" />
+        <result column="STATUS" property="status" />
+        <result column="statusname" property="statusname" />
+        <result column="VEHICLENO" property="vehicleno" />
+        <result column="DRIVERNAME" property="drivername" />
+        <result column="detailcreatetime" property="detailcreatetime" />
+        <result column="detailcreateuserid" property="detailcreateuserid" />
+        <result column="ID" property="id" />
+        <result column="PLANSWEIGHT" property="plansweight" />
+        <result column="SWEIGHT" property="sweight" />
+        <result column="WORKSWEIGHT" property="worksweight" />
+        <result column="NeedWeight" property="NeedWeight" />
+        <result column="FINISHSWEIGHT" property="finishsweight" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="BATCHNO" property="batchno" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Product_Type" property="productType" />
+        <result column="MID" property="mid" />
+        <result column="MSpecs" property="MSpecs" />
+        <result column="WareHouse" property="WareHouse" />
+        <result column="MNAME" property="mname" />
+        <result column="Box_Type" property="boxType" />
+    </resultMap>
+
+</mapper>

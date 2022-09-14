@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsInputtmpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsInputtmp">
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="STOREID" property="storeid" />
+        <result column="STORENAME" property="storename" />
+        <result column="C_ID" property="cId" />
+        <result column="CID" property="cid" />
+        <result column="CELLCODE" property="cellcode" />
+        <result column="AISLE" property="aisle" />
+        <result column="LAYER" property="layer" />
+        <result column="RANK" property="rank" />
+        <result column="ROWW" property="roww" />
+        <result column="rackstatus" property="rackstatus" />
+        <result column="PLATTYPE" property="plattype" />
+        <result column="CELLCLASS" property="cellclass" />
+        <result column="PALLETID" property="palletid" />
+        <result column="ID" property="id" />
+        <result column="STATIONID" property="stationid" />
+        <result column="TrayNO" property="TrayNO" />
+        <result column="ProDate" property="ProDate" />
+        <result column="CompanyID" property="CompanyID" />
+        <result column="PieceNumber" property="PieceNumber" />
+        <result column="Status" property="Status" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="YarnName" property="YarnName" />
+        <result column="TwistWayName" property="TwistWayName" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="wStatus" property="wStatus" />
+        <result column="WIndex" property="WIndex" />
+        <result column="CM_Flag" property="cmFlag" />
+        <result column="INPUTTMPSTATUS" property="inputtmpstatus" />
+        <result column="LTime" property="LTime" />
+        <result column="Barcode" property="Barcode" />
+        <result column="Charg" property="Charg" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Product_Type" property="productType" />
+        <result column="I_BILL_ID" property="iBillId" />
+        <result column="IOCLASS_ID" property="ioclassId" />
+        <result column="PRODTIME" property="prodtime" />
+        <result column="MID" property="mid" />
+        <result column="MNAME" property="mname" />
+        <result column="MSpecs" property="MSpecs" />
+        <result column="RWeight" property="RWeight" />
+        <result column="NWeight" property="NWeight" />
+        <result column="WareHouse" property="WareHouse" />
+        <result column="Box_Type" property="boxType" />
+    </resultMap>
+
+</mapper>

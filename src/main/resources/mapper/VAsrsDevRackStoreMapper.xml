@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsDevRackStoreMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsDevRackStore">
+        <result column="CID1" property="cid1" />
+        <result column="AISLE" property="aisle" />
+        <result column="ID1" property="id1" />
+        <result column="BarCodeDate" property="BarCodeDate" />
+        <result column="CanBlendMch" property="CanBlendMch" />
+        <result column="MachineID" property="MachineID" />
+        <result column="BatchNo" property="BatchNo" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="Grade" property="Grade" />
+        <result column="DEVSTATUS" property="devstatus" />
+        <result column="INSTATUS" property="instatus" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="ORDERID1" property="orderid1" />
+        <result column="LAYER" property="layer" />
+        <result column="RANK" property="rank" />
+        <result column="Row1" property="Row1" />
+        <result column="CELLCLASS1" property="cellclass1" />
+    </resultMap>
+
+</mapper>

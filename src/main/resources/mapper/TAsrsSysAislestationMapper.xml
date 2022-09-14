@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsSysAislestationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsSysAislestation">
+        <result column="STATIONID" property="stationid" />
+        <result column="DEVID" property="devid" />
+        <result column="DEVNAME" property="devname" />
+        <result column="STATIONNAME" property="stationname" />
+        <result column="STATUS" property="status" />
+        <result column="TARGETNO" property="targetno" />
+        <result column="IOCLASS" property="ioclass" />
+        <result column="DIR" property="dir" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="Aisle" property="Aisle" />
+        <result column="GATENO" property="gateno" />
+    </resultMap>
+
+</mapper>

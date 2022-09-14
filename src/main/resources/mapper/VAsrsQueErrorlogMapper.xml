@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueErrorlogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueErrorlog">
+        <result column="操作时间" property="操作时间" />
+        <result column="货位代号" property="货位代号" />
+        <result column="托盘号" property="托盘号" />
+        <result column="操作详细内容" property="操作详细内容" />
+        <result column="操作人员" property="操作人员" />
+        <result column="备注" property="备注" />
+        <result column="作业类型" property="作业类型" />
+        <result column="件烟立体库托盘号" property="件烟立体库托盘号" />
+        <result column="库房索引" property="库房索引" />
+        <result column="库房号" property="库房号" />
+        <result column="库房名称" property="库房名称" />
+    </resultMap>
+
+</mapper>

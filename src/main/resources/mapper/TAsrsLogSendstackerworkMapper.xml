@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsLogSendstackerworkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsLogSendstackerwork">
+        <result column="LTIME" property="ltime" />
+        <result column="AISLE" property="aisle" />
+        <result column="DETAIL" property="detail" />
+        <result column="WORKTYPE" property="worktype" />
+        <result column="PALLETID" property="palletid" />
+        <result column="SLAYER" property="slayer" />
+        <result column="SRANK" property="srank" />
+        <result column="SROW" property="srow" />
+        <result column="TLAYER" property="tlayer" />
+        <result column="TRANK" property="trank" />
+        <result column="TROW" property="trow" />
+        <result column="STATIONID" property="stationid" />
+        <result column="GATENO" property="gateno" />
+        <result column="WORKINDEX" property="workindex" />
+    </resultMap>
+
+</mapper>

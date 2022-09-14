@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsLogMstatuschangeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsLogMstatuschange">
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="STOREID" property="storeid" />
+        <result column="STORENAME" property="storename" />
+        <result column="storedefmemo" property="storedefmemo" />
+        <result column="C_ID" property="cId" />
+        <result column="rackstoredef_id" property="rackstoredefId" />
+        <result column="rackstoreid" property="rackstoreid" />
+        <result column="rackstoredefname" property="rackstoredefname" />
+        <result column="rackstoredefmemo" property="rackstoredefmemo" />
+        <result column="CID" property="cid" />
+        <result column="rackpalletid" property="rackpalletid" />
+        <result column="AISLE" property="aisle" />
+        <result column="LAYER" property="layer" />
+        <result column="RANK" property="rank" />
+        <result column="ROWW" property="roww" />
+        <result column="rackstatus" property="rackstatus" />
+        <result column="RACKSTATUSNAME" property="rackstatusname" />
+        <result column="ERP_ID" property="erpId" />
+        <result column="rackcellcode" property="rackcellcode" />
+        <result column="PALLETID" property="palletid" />
+        <result column="M_ID" property="mId" />
+        <result column="mid" property="mid" />
+        <result column="matmain_id" property="matmainId" />
+        <result column="matmainid" property="matmainid" />
+        <result column="mmname" property="mmname" />
+        <result column="matmailmemo" property="matmailmemo" />
+        <result column="MATNAME" property="matname" />
+        <result column="MSPECI" property="mspeci" />
+        <result column="Mdrawno" property="Mdrawno" />
+        <result column="MUNIT" property="munit" />
+        <result column="MWEIGHT" property="mweight" />
+        <result column="BARCODE" property="barcode" />
+        <result column="matdermemo" property="matdermemo" />
+        <result column="NUM" property="num" />
+        <result column="SWEIGHT" property="sweight" />
+        <result column="MSTATUS" property="mstatus" />
+        <result column="mstatusname" property="mstatusname" />
+        <result column="MCLASS" property="mclass" />
+        <result column="mclassname" property="mclassname" />
+        <result column="MSPECIDEF_ID" property="mspecidefId" />
+        <result column="matdefmspeci" property="matdefmspeci" />
+        <result column="MSPECINAME" property="mspeciname" />
+        <result column="mspecidefweight" property="mspecidefweight" />
+        <result column="mspecidefmemo" property="mspecidefmemo" />
+        <result column="VENDOR_ID" property="vendorId" />
+        <result column="VENDORID" property="vendorid" />
+        <result column="VENDORNAME" property="vendorname" />
+        <result column="OUTCUSTOMER_ID" property="outcustomerId" />
+        <result column="CUSTOMERID" property="customerid" />
+        <result column="CUSTOMERNAME" property="customername" />
+        <result column="BATCHNO" property="batchno" />
+        <result column="BATCHDEF_ID" property="batchdefId" />
+        <result column="I_BILL_ID" property="iBillId" />
+        <result column="MEMO" property="memo" />
+        <result column="PRINTTIME" property="printtime" />
+        <result column="PRODTIME" property="prodtime" />
+        <result column="BC" property="bc" />
+        <result column="PRODBC" property="prodbc" />
+        <result column="FIRSTINTIME" property="firstintime" />
+        <result column="LASTOUTTIME" property="lastouttime" />
+        <result column="STORESTATUS" property="storestatus" />
+        <result column="MREASON" property="mreason" />
+        <result column="CHECKFLAG" property="checkflag" />
+        <result column="CHECKTIME" property="checktime" />
+        <result column="ID" property="id" />
+        <result column="CURBC" property="curbc" />
+        <result column="USERID" property="userid" />
+        <result column="NEWSTATUS" property="newstatus" />
+        <result column="LTIME" property="ltime" />
+        <result column="Newstatusname" property="Newstatusname" />
+    </resultMap>
+
+</mapper>

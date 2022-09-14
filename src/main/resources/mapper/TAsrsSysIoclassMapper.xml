@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsSysIoclassMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsSysIoclass">
+        <result column="IOCLASS" property="ioclass" />
+        <result column="IOCLASSNAME" property="ioclassname" />
+        <result column="TRANTYPE" property="trantype" />
+        <result column="REDTYPE" property="redtype" />
+        <result column="PREFIX" property="prefix" />
+        <result column="MEMO" property="memo" />
+        <result column="ERP_ID" property="erpId" />
+        <result column="TOERP" property="toerp" />
+        <result column="ISINUSED" property="isinused" />
+        <result column="ISSYS" property="issys" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="USERID" property="userid" />
+        <result column="ID" property="id" />
+    </resultMap>
+
+</mapper>

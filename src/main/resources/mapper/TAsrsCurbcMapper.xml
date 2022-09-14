@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsCurbcMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsCurbc">
+        <result column="BCCLASS" property="bcclass" />
+        <result column="BC" property="bc" />
+        <result column="BCDATE" property="bcdate" />
+        <result column="BCDAYNIGHT" property="bcdaynight" />
+        <result column="BCBC" property="bcbc" />
+        <result column="USERID" property="userid" />
+        <result column="BEFOREBC" property="beforebc" />
+        <result column="BEFOREBCDATE" property="beforebcdate" />
+        <result column="BEFOREBCDAYNIGHT" property="beforebcdaynight" />
+        <result column="BEFOREBCBC" property="beforebcbc" />
+        <result column="BEFOREUSERID" property="beforeuserid" />
+        <result column="ID" property="id" />
+    </resultMap>
+
+</mapper>

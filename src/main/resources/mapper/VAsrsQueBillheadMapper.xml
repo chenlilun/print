@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueBillheadMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueBillhead">
+        <result column="单据号" property="单据号" />
+        <result column="单据类型索引" property="单据类型索引" />
+        <result column="单据类型号" property="单据类型号" />
+        <result column="单据类型" property="单据类型" />
+        <result column="事务类型号" property="事务类型号" />
+        <result column="事物类型" property="事物类型" />
+        <result column="红单标识号" property="红单标识号" />
+        <result column="红单标识" property="红单标识" />
+        <result column="前缀" property="前缀" />
+        <result column="单据类型备注" property="单据类型备注" />
+        <result column="库房索引" property="库房索引" />
+        <result column="库房代号" property="库房代号" />
+        <result column="库房" property="库房" />
+        <result column="供应商索引" property="供应商索引" />
+        <result column="供应商代号" property="供应商代号" />
+        <result column="供应商" property="供应商" />
+        <result column="客户索引" property="客户索引" />
+        <result column="客户代号" property="客户代号" />
+        <result column="客户" property="客户" />
+        <result column="部门索引" property="部门索引" />
+        <result column="部门代号" property="部门代号" />
+        <result column="部门" property="部门" />
+        <result column="备注" property="备注" />
+        <result column="源库房索引" property="源库房索引" />
+        <result column="源单据号" property="源单据号" />
+        <result column="源供应商索引" property="源供应商索引" />
+        <result column="源客户索引" property="源客户索引" />
+        <result column="计划操作时间" property="计划操作时间" />
+        <result column="计划完成时间" property="计划完成时间" />
+        <result column="ERP单据号" property="ERP单据号" />
+        <result column="单据号01" property="单据号01" />
+        <result column="单据号02" property="单据号02" />
+        <result column="单据号03" property="单据号03" />
+        <result column="状态号" property="状态号" />
+        <result column="状态" property="状态" />
+        <result column="单据唯一ID号" property="单据唯一ID号" />
+        <result column="流向编码" property="流向编码" />
+        <result column="司机姓名" property="司机姓名" />
+        <result column="司机联系方式" property="司机联系方式" />
+        <result column="创建班次" property="创建班次" />
+        <result column="创建时间" property="创建时间" />
+        <result column="创建用户" property="创建用户" />
+        <result column="表头索引" property="表头索引" />
+        <result column="车牌号" property="车牌号" />
+        <result column="最后完成时间" property="最后完成时间" />
+    </resultMap>
+
+</mapper>

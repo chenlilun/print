@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsBillMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsBill">
+        <result column="BILLID" property="billid" />
+        <result column="IOCLASS_ID" property="ioclassId" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="Head_Vendor_ID" property="headVendorId" />
+        <result column="Head_Customer_ID" property="headCustomerId" />
+        <result column="DEPT_ID" property="deptId" />
+        <result column="MEMO" property="memo" />
+        <result column="SOURCE_STOREDEF_ID" property="sourceStoredefId" />
+        <result column="SOURCE_BILLID" property="sourceBillid" />
+        <result column="SOURCE_VENDOR_ID" property="sourceVendorId" />
+        <result column="SOURCE_CUSROMER_ID" property="sourceCusromerId" />
+        <result column="PLANOPETIME" property="planopetime" />
+        <result column="PLANFINISHTIME" property="planfinishtime" />
+        <result column="ERP_BILLID" property="erpBillid" />
+        <result column="ERP_ID" property="erpId" />
+        <result column="TARGETID_ERP" property="targetidErp" />
+        <result column="DRIVERTEL" property="drivertel" />
+        <result column="OTHERBILLID01" property="otherbillid01" />
+        <result column="OTHERBILLID02" property="otherbillid02" />
+        <result column="OTHERBILLID03" property="otherbillid03" />
+        <result column="STATUS" property="status" />
+        <result column="CREATEBC" property="createbc" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="CREATEUSERID" property="createuserid" />
+        <result column="HAED_ID" property="haedId" />
+        <result column="BILLHEAD_ID" property="billheadId" />
+        <result column="LISTINDEX" property="listindex" />
+        <result column="M_ID" property="mId" />
+        <result column="PLANNUM" property="plannum" />
+        <result column="PLANSWEIGHT" property="plansweight" />
+        <result column="NUM" property="num" />
+        <result column="SWEIGHT" property="sweight" />
+        <result column="FINISHNUM" property="finishnum" />
+        <result column="FINISHSWEIGHT" property="finishsweight" />
+        <result column="MSTATUS" property="mstatus" />
+        <result column="MCLASS" property="mclass" />
+        <result column="MSPECIDEF_ID" property="mspecidefId" />
+        <result column="VENDOR_ID" property="vendorId" />
+        <result column="OUTCUSTOMER_ID" property="outcustomerId" />
+        <result column="BATCHDEF_ID" property="batchdefId" />
+        <result column="I_BILL_ID" property="iBillId" />
+        <result column="PRINTTIME" property="printtime" />
+        <result column="OUTBC" property="outbc" />
+        <result column="Detail_MEMO" property="detailMemo" />
+        <result column="GATENO" property="gateno" />
+        <result column="BillDetailStatus" property="BillDetailStatus" />
+        <result column="DRIVERNAME" property="drivername" />
+        <result column="detailcreatetime" property="detailcreatetime" />
+        <result column="detailcreateuserid" property="detailcreateuserid" />
+        <result column="ID" property="id" />
+        <result column="UPERP_FLAG" property="uperpFlag" />
+        <result column="UPERP_DATE" property="uperpDate" />
+        <result column="UPERP_RMSG" property="uperpRmsg" />
+        <result column="billfinishtime" property="billfinishtime" />
+        <result column="PRODUCTION_DATE" property="productionDate" />
+        <result column="MID" property="mid" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Product_Type" property="productType" />
+        <result column="BATCHNO" property="batchno" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="MSpecs" property="MSpecs" />
+        <result column="VEHICLENO" property="vehicleno" />
+        <result column="Box_Type" property="boxType" />
+    </resultMap>
+
+</mapper>

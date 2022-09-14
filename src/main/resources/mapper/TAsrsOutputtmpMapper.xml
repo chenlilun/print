@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsOutputtmpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsOutputtmp">
+        <id column="ID" property="id" />
+        <result column="BILL_ID" property="billId" />
+        <result column="BillHEAD_ID" property="billheadId" />
+        <result column="STORE_ID" property="storeId" />
+        <result column="IOCLASS_ID" property="ioclassId" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="OUTSTATIONID" property="outstationid" />
+        <result column="OUTGATENO" property="outgateno" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="CREATEUSER" property="createuser" />
+        <result column="MEMO" property="memo" />
+        <result column="CASEBACKNO" property="casebackno" />
+        <result column="OUTNUM" property="outnum" />
+        <result column="OUTWEIGHT" property="outweight" />
+        <result column="OUTBC" property="outbc" />
+        <result column="BACKNUM" property="backnum" />
+        <result column="GATENO" property="gateno" />
+        <result column="ISSCAN" property="isscan" />
+    </resultMap>
+
+</mapper>

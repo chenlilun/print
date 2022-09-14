@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.TAsrsSysFunctionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.TAsrsSysFunction">
+        <result column="FCLASS" property="fclass" />
+        <result column="FNAME" property="fname" />
+        <result column="MENU1" property="menu1" />
+        <result column="MENU2" property="menu2" />
+        <result column="MENU3" property="menu3" />
+        <result column="MEMO" property="memo" />
+        <result column="ISINUSED" property="isinused" />
+        <result column="ISHIDE" property="ishide" />
+        <result column="ISSYS" property="issys" />
+        <result column="ID" property="id" />
+        <result column="ALLMENU1" property="allmenu1" />
+        <result column="ALLMENU2" property="allmenu2" />
+        <result column="ALLMENU3" property="allmenu3" />
+    </resultMap>
+
+</mapper>

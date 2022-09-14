@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsStorePdMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsStorePd">
+        <result column="库房" property="库房" />
+        <result column="批号" property="批号" />
+        <result column="规格" property="规格" />
+        <result column="等级" property="等级" />
+        <result column="托盘数" property="托盘数" />
+        <result column="净重" property="净重" />
+        <result column="件数" property="件数" />
+    </resultMap>
+
+</mapper>

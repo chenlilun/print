@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsStationstatusMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsStationstatus">
+        <result column="站台号" property="站台号" />
+        <result column="站台名称" property="站台名称" />
+        <result column="去向号" property="去向号" />
+        <result column="数量" property="数量" />
+        <result column="时间" property="时间" />
+        <result column="使用" property="使用" />
+        <result column="出库单ID" property="出库单ID" />
+    </resultMap>
+
+</mapper>

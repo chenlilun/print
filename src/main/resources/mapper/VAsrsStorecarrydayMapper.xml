@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsStorecarrydayMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsStorecarryday">
+        <result column="M_ID" property="mId" />
+        <result column="PRENUM" property="prenum" />
+        <result column="PRESWEIGHT" property="presweight" />
+        <result column="INNUM" property="innum" />
+        <result column="INSWEIGHT" property="insweight" />
+        <result column="OUTNUM" property="outnum" />
+        <result column="OUTSWEIGHT" property="outsweight" />
+        <result column="SNUM" property="snum" />
+        <result column="SSWEIGHT" property="ssweight" />
+        <result column="CARRYDAY" property="carryday" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="LTIME" property="ltime" />
+        <result column="MATNAME" property="matname" />
+        <result column="mmname" property="mmname" />
+        <result column="mid" property="mid" />
+        <result column="weight" property="weight" />
+        <result column="mspeciname" property="mspeciname" />
+    </resultMap>
+
+</mapper>

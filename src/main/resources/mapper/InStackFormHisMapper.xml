@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.InStackFormHisMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.InStackFormHis">
+        <result column="CHARG" property="charg" />
+        <result column="STACK_CODE" property="stackCode" />
+        <result column="MATERIAL" property="material" />
+        <result column="PRODUCTION_DATE" property="productionDate" />
+        <result column="TRADE_CODE" property="tradeCode" />
+        <result column="SHIFT" property="shift" />
+        <result column="PRODUCT_TYPE" property="productType" />
+        <result column="PRODUCTTIME" property="producttime" />
+        <result column="XS" property="xs" />
+        <result column="PALLETID" property="palletid" />
+        <result column="ID" property="id" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPLOADMARK" property="uploadmark" />
+        <result column="CountU" property="CountU" />
+    </resultMap>
+
+</mapper>

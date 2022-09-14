@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsBillheadMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsBillhead">
+        <result column="BILLID" property="billid" />
+        <result column="IOCLASS_ID" property="ioclassId" />
+        <result column="IOCLASS" property="ioclass" />
+        <result column="IOCLASSNAME" property="ioclassname" />
+        <result column="TRANTYPE" property="trantype" />
+        <result column="trantypename" property="trantypename" />
+        <result column="REDTYPE" property="redtype" />
+        <result column="redTypeName" property="redTypeName" />
+        <result column="PREFIX" property="prefix" />
+        <result column="ioclassmemo" property="ioclassmemo" />
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="STOREID" property="storeid" />
+        <result column="STORENAME" property="storename" />
+        <result column="VENDOR_ID" property="vendorId" />
+        <result column="VENDORID" property="vendorid" />
+        <result column="VENDORNAME" property="vendorname" />
+        <result column="CUSTOMER_ID" property="customerId" />
+        <result column="CUSTOMERID" property="customerid" />
+        <result column="CUSTOMERNAME" property="customername" />
+        <result column="DEPT_ID" property="deptId" />
+        <result column="DEPTID" property="deptid" />
+        <result column="DEPTNAME" property="deptname" />
+        <result column="MEMO" property="memo" />
+        <result column="SOURCE_STOREDEF_ID" property="sourceStoredefId" />
+        <result column="SOURCE_BILLID" property="sourceBillid" />
+        <result column="SOURCE_VENDOR_ID" property="sourceVendorId" />
+        <result column="SOURCE_CUSROMER_ID" property="sourceCusromerId" />
+        <result column="PLANOPETIME" property="planopetime" />
+        <result column="PLANFINISHTIME" property="planfinishtime" />
+        <result column="ERP_BILLID" property="erpBillid" />
+        <result column="OTHERBILLID01" property="otherbillid01" />
+        <result column="OTHERBILLID02" property="otherbillid02" />
+        <result column="OTHERBILLID03" property="otherbillid03" />
+        <result column="STATUS" property="status" />
+        <result column="statusname" property="statusname" />
+        <result column="ERP_ID" property="erpId" />
+        <result column="TARGETID_ERP" property="targetidErp" />
+        <result column="DRIVERNAME" property="drivername" />
+        <result column="DRIVERTEL" property="drivertel" />
+        <result column="CREATEBC" property="createbc" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="CREATEUSERID" property="createuserid" />
+        <result column="ID" property="id" />
+        <result column="USERNAME" property="username" />
+        <result column="GATENO" property="gateno" />
+        <result column="VEHICLENO" property="vehicleno" />
+        <result column="billfinishtime" property="billfinishtime" />
+    </resultMap>
+
+</mapper>

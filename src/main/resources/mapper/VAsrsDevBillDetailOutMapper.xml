@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsDevBillDetailOutMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsDevBillDetailOut">
+        <result column="BILLHEAD_ID" property="billheadId" />
+        <result column="BILLID" property="billid" />
+        <result column="LISTINDEX" property="listindex" />
+        <result column="PLANNUM" property="plannum" />
+        <result column="PLANSWEIGHT" property="plansweight" />
+        <result column="NUM" property="num" />
+        <result column="SWEIGHT" property="sweight" />
+        <result column="WorkNum" property="WorkNum" />
+        <result column="WorkWeight" property="WorkWeight" />
+        <result column="NeedNum" property="NeedNum" />
+        <result column="NeedWeight" property="NeedWeight" />
+        <result column="FINISHNUM" property="finishnum" />
+        <result column="FINISHSWEIGHT" property="finishsweight" />
+        <result column="MSTATUS" property="mstatus" />
+        <result column="MCLASS" property="mclass" />
+        <result column="OUTCUSTOMER_ID" property="outcustomerId" />
+        <result column="BATCHDEF_ID" property="batchdefId" />
+        <result column="I_BILL_ID" property="iBillId" />
+        <result column="PRINTTIME" property="printtime" />
+        <result column="OUTBC" property="outbc" />
+        <result column="MEMO" property="memo" />
+        <result column="STATUS" property="status" />
+        <result column="GATENO" property="gateno" />
+        <result column="VEHICLENO" property="vehicleno" />
+        <result column="DRIVERNAME" property="drivername" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="CREATEUSERID" property="createuserid" />
+        <result column="ID" property="id" />
+        <result column="BATCHNO" property="batchno" />
+        <result column="Trade_Type" property="tradeType" />
+        <result column="Product_Type" property="productType" />
+        <result column="MID" property="mid" />
+        <result column="GradeCode" property="GradeCode" />
+        <result column="MSpecs" property="MSpecs" />
+        <result column="WareHouse" property="WareHouse" />
+        <result column="MNAME" property="mname" />
+        <result column="VENDOR_ID" property="vendorId" />
+        <result column="Box_Type" property="boxType" />
+    </resultMap>
+
+</mapper>

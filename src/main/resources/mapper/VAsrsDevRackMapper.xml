@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsDevRackMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsDevRack">
+        <result column="STOREDEF_ID" property="storedefId" />
+        <result column="CID1" property="cid1" />
+        <result column="CID2" property="cid2" />
+        <result column="CELLCODE1" property="cellcode1" />
+        <result column="CELLCODE2" property="cellcode2" />
+        <result column="PALLETID1" property="palletid1" />
+        <result column="PALLETID2" property="palletid2" />
+        <result column="AISLE" property="aisle" />
+        <result column="LAYER" property="layer" />
+        <result column="RANK" property="rank" />
+        <result column="Row1" property="Row1" />
+        <result column="Row2" property="Row2" />
+        <result column="STATUS1" property="status1" />
+        <result column="STATUS2" property="status2" />
+        <result column="LASTTIME1" property="lasttime1" />
+        <result column="LASTTIME2" property="lasttime2" />
+        <result column="PLATTYPE1" property="plattype1" />
+        <result column="PLATTYPE2" property="plattype2" />
+        <result column="CELLCLASS1" property="cellclass1" />
+        <result column="CELLCLASS2" property="cellclass2" />
+        <result column="SPALLETID1" property="spalletid1" />
+        <result column="SPALLETID2" property="spalletid2" />
+        <result column="LPALLETID1" property="lpalletid1" />
+        <result column="LPALLETID2" property="lpalletid2" />
+        <result column="CPALLETID1" property="cpalletid1" />
+        <result column="CPALLETID2" property="cpalletid2" />
+        <result column="XPALLETID1" property="xpalletid1" />
+        <result column="XPALLETID2" property="xpalletid2" />
+        <result column="CHECKFLAG1" property="checkflag1" />
+        <result column="CHECKFLAG2" property="checkflag2" />
+        <result column="CHECKTIME1" property="checktime1" />
+        <result column="CHECKTIME2" property="checktime2" />
+        <result column="MEMO1" property="memo1" />
+        <result column="MEMO2" property="memo2" />
+        <result column="ERP_ID1" property="erpId1" />
+        <result column="ERP_ID2" property="erpId2" />
+        <result column="AREA_ID1" property="areaId1" />
+        <result column="AREA_ID2" property="areaId2" />
+        <result column="ISDEFAULT1" property="isdefault1" />
+        <result column="ISDEFAULT2" property="isdefault2" />
+        <result column="ISINUSED1" property="isinused1" />
+        <result column="ISINUSED2" property="isinused2" />
+        <result column="ISSYS1" property="issys1" />
+        <result column="ISSYS2" property="issys2" />
+        <result column="ID1" property="id1" />
+        <result column="ID2" property="id2" />
+        <result column="WORKTYPE1" property="worktype1" />
+        <result column="WORKTYPE2" property="worktype2" />
+        <result column="OPEBC1" property="opebc1" />
+        <result column="OPEBC2" property="opebc2" />
+        <result column="ORDERID1" property="orderid1" />
+        <result column="ORDERID2" property="orderid2" />
+    </resultMap>
+
+</mapper>

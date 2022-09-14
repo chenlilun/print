@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsMonthChangedateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsMonthChangedate">
+        <result column="CUSTOMERNAME" property="customername" />
+        <result column="MONTH_OUTCUSTOMER_ID" property="monthOutcustomerId" />
+        <result column="MONTH_DAY" property="monthDay" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="CREATEUSER" property="createuser" />
+        <result column="MEMO" property="memo" />
+        <result column="ID" property="id" />
+        <result column="StorePrice_Unit" property="storepriceUnit" />
+        <result column="Carry_Price" property="carryPrice" />
+        <result column="Cold_Price" property="coldPrice" />
+        <result column="CM_Price" property="cmPrice" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.VAsrsQueRackMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.VAsrsQueRack">
+        <result column="库房索引" property="库房索引" />
+        <result column="库房号" property="库房号" />
+        <result column="库房" property="库房" />
+        <result column="库房备注" property="库房备注" />
+        <result column="货位代号" property="货位代号" />
+        <result column="货位编码" property="货位编码" />
+        <result column="托盘号" property="托盘号" />
+        <result column="巷道" property="巷道" />
+        <result column="层" property="层" />
+        <result column="列" property="列" />
+        <result column="排" property="排" />
+        <result column="状态号" property="状态号" />
+        <result column="状态" property="状态" />
+        <result column="状态备注" property="状态备注" />
+        <result column="最后使用时间" property="最后使用时间" />
+        <result column="托盘类型号" property="托盘类型号" />
+        <result column="托盘类型" property="托盘类型" />
+        <result column="托盘类型备注" property="托盘类型备注" />
+        <result column="货格类型号" property="货格类型号" />
+        <result column="货格类型" property="货格类型" />
+        <result column="货格类型备注" property="货格类型备注" />
+        <result column="堆垛机托盘号" property="堆垛机托盘号" />
+        <result column="最后存放托盘号" property="最后存放托盘号" />
+        <result column="所属区域索引" property="所属区域索引" />
+        <result column="所属区域代码" property="所属区域代码" />
+        <result column="所属区域名称" property="所属区域名称" />
+        <result column="ERP编码" property="ERP编码" />
+        <result column="托盘类型定义代号" property="托盘类型定义代号" />
+        <result column="托盘类型定义" property="托盘类型定义" />
+        <result column="备注" property="备注" />
+        <result column="索引" property="索引" />
+        <result column="批号" property="批号" />
+        <result column="等级" property="等级" />
+        <result column="物料代号" property="物料代号" />
+        <result column="物料规格" property="物料规格" />
+        <result column="码单号" property="码单号" />
+    </resultMap>
+
+</mapper>

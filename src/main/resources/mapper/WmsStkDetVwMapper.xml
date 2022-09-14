@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.print.mapper.WmsStkDetVwMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.print.entity.WmsStkDetVw">
+        <result column="WH_NO" property="whNo" />
+        <result column="BIN_NO" property="binNo" />
+        <result column="BIN_STA_DESC" property="binStaDesc" />
+        <result column="STK_STA" property="stkSta" />
+        <result column="INHIBIT_OUT_FLG_DESC" property="inhibitOutFlgDesc" />
+        <result column="LOCK_CTR_DESC" property="lockCtrDesc" />
+        <result column="PAL_CODE" property="palCode" />
+        <result column="BAR_CODE" property="barCode" />
+        <result column="FACTORY_NO" property="factoryNo" />
+        <result column="FOAM_TYPE" property="foamType" />
+        <result column="LOT_NO" property="lotNo" />
+        <result column="YAM_KIND" property="yamKind" />
+        <result column="TWIST" property="twist" />
+        <result column="PROD_TYPE" property="prodType" />
+        <result column="GRADE" property="grade" />
+        <result column="COLOUR" property="colour" />
+        <result column="PROD_NO" property="prodNo" />
+        <result column="PROD_DESC" property="prodDesc" />
+        <result column="SPEC" property="spec" />
+        <result column="SAP_BINCODE" property="sapBincode" />
+        <result column="SALE_TYPE" property="saleType" />
+        <result column="PCK_TYPE" property="pckType" />
+        <result column="PRODUCTION_DATE" property="productionDate" />
+        <result column="PALLET_NO" property="palletNo" />
+        <result column="NET_WIGHT" property="netWight" />
+        <result column="GORSS_WIGHT" property="gorssWight" />
+        <result column="PALLET_TYPE" property="palletType" />
+        <result column="COUNT" property="count" />
+        <result column="PRINT_TIME" property="printTime" />
+        <result column="SRC_LINE" property="srcLine" />
+    </resultMap>
+
+</mapper>
