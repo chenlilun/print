@@ -36,7 +36,7 @@ public class SilkPrintMessageAble implements Printable {
         g2d.setColor(Color.BLACK);//设置颜色
         //模式  字体   字体大小
         g2d.setFont(new Font("Default", Font.BOLD, 6));
-        int startX1=3;//第一列初始x值
+        int startX1=14;//第一列初始x值
         int startX=2;//第一列初始x值
         int dValue1=71;//列差值
 //        int startY1=6;//第一行初始Y值
@@ -54,11 +54,11 @@ public class SilkPrintMessageAble implements Printable {
         int y3 = 42 ;
         int startX22=41;//第三行第二列
         int startX23=53;//第三行第三列
-        int startXcode=18;//二维码x
+        int startXcode=30;//二维码x
 //        int startYcode=25;//二维码Y
         int startYcode=23;//二维码Y
         int wh=33;//边长
-        int startX4=10;
+        int startX4=27;
         int startX2Add=5;
 //        int startY4=65;
         int startY4=61;
@@ -75,25 +75,14 @@ public class SilkPrintMessageAble implements Printable {
                   }
               }
             if(i%4==0){
-       /*         if(silkPrintMessage.getBlank()!=null&&silkPrintMessage.getBlank()){
-          *//*          g2d.drawString("",startX1+(dValue1*i),startY1);
-                    g2d.drawString("",startX1+(dValue1*i),startY2);
-                    g2d.drawString("",startX2+(dValue1*i),startY2);
-                    g2d.drawString("",startX1+(dValue1*i),startY3);
-                    g2d.drawString("",startX22+(dValue1*i),startY3);
-                    g2d.drawString("",startX23+(dValue1*i),startY3);
-                    g2d.drawImage(QRCodeUtil.getImage(""),startXcode+(dValue1*i),startYcode,wh,wh,null);
-                    g2d.drawString("",startX4+(dValue1*i),startY4);*//*
-                }else {
 
-                }*/
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage ,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+//                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage ,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
-                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
+//                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
                     g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
                     g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
                     if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
@@ -111,12 +100,12 @@ public class SilkPrintMessageAble implements Printable {
             }else if(i%4==1){
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+//                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
 //                    g2d.drawString(silkPrintMessage.getDoffNo(),startX2+(dValue1*i)+5,startY3);
-                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
+//                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
                     g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
                     g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
                     if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
@@ -143,12 +132,12 @@ public class SilkPrintMessageAble implements Printable {
             }else if(i%4==2){
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+//                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
 //                    g2d.drawString(silkPrintMessage.getDoffNo(),startX2+(dValue1*i)+5,startY3);
-                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
+//                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
                     g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
                     g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
                     if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
@@ -187,12 +176,12 @@ public class SilkPrintMessageAble implements Printable {
      }*/
                 if(silkPrintMessage.getBlank()==null||!silkPrintMessage.getBlank()){
                     g2d.drawString(silkPrintMessage.getBatchNo(),startX1+(dValue1*i),startY1);
-                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage ,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
+//                    g2d.drawString(team+"/"+getNightWhite(silkPrintMessage ,team)+silkPrintMessage.getDoffNo(),startX2+(dValue1*i),startY1);
                     g2d.drawString(silkPrintMessage.getSpec(),startX1+(dValue1*i),startY2);
                     g2d.drawString(silkPrintMessage.getLineMachine(),startX2+(dValue1*i)+startX2Add,startY2);
                     g2d.drawString(silkPrintMessage.getDoffDate(),startX1+(dValue1*i),startY3);
 //                    g2d.drawString(silkPrintMessage.getDoffNo(),startX2+(dValue1*i)+5,startY3);
-                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
+//                    g2d.drawString("("+setSpindleNum(silkPrintMessage)+")",startX23+(dValue1*i),startY3);
                     g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
                     g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
                     if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){

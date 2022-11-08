@@ -1,10 +1,7 @@
 package com.example.print.service;
 
 
-import com.example.print.bean.JsonResult;
-import com.example.print.bean.PrintData;
-import com.example.print.bean.SilkCarOnline;
-import com.example.print.bean.SilkCarRowCol;
+import com.example.print.bean.*;
 import com.example.print.okhttp.OkHttpUtils;
 import com.example.print.p.SilkPrintMessage;
 import com.example.print.print.vo.PrintSelectSilkBarCodesVo;
@@ -87,54 +84,29 @@ public class DoffService {
     }
 
     //打印在线丝车标签
-    public void printCarSilkCode(List<SilkCarOnline> silkCarOnlineList) {
+    public void printCarSilkCode(List<Book> books) {
         List<SilkPrintMessage> silkPrintMessageList = new ArrayList<>();
-        silkCarOnlineList.forEach(silkCarOnline -> {
-            silkCarOnline.getSilkCarRowColList().stream().sorted(Comparator.comparing(SilkCarRowCol::getSortBy).reversed()).forEach(silkCarRowCol -> {
-     /*           if (silkCarRowCol.getBlank() != null && silkCarRowCol.getBlank()) {
-                    SilkPrintMessage silkPrintMessage = new SilkPrintMessage();
-                    silkPrintMessage.setBlank(silkCarRowCol.getBlank());
-//                    silkPrintMessage.setDoffDate(new Date());
-                    silkPrintMessageList.add(silkPrintMessage);
-                } else {*/
-                SilkPrintMessage silkPrintMessage = new SilkPrintMessage();
-                silkPrintMessage.setBatchNo(silkCarRowCol.getBatchNo());
-                silkPrintMessage.setClasses("");
-//                    silkPrintMessage.setDoffDate(new SimpleDateFormat("yyMMdd HH:mm").format(silkCarRowCol.getDoffingTime()));
-                try {
-//                        silkPrintMessage.setDoffDate(new SimpleDateFormat("yyMMdd HH:mm").format());
-                    silkPrintMessage.setDoffDate(DateUtils.reduceEight(silkCarRowCol.getDoffingTime()));
-                    if ("C1C2C3C4".contains(silkCarRowCol.getLineName())) {
-                        silkPrintMessage.setDoffDateBefore(DateUtils.reduceEightBefore(silkCarRowCol.getDoffingTime(), silkCarRowCol.getLineName()));
-                    }
-                } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                } finally {
-
-                }
-                silkPrintMessage.setBlank(silkCarRowCol.getBlank());
-                silkPrintMessage.setLineMachine(silkCarRowCol.getLineName() + "-" + silkCarRowCol.getMachineName());
-                silkPrintMessage.setSpec(silkCarRowCol.getSpec());
-                silkPrintMessage.setSpindleNum(silkCarRowCol.getSpindleNum());
-                silkPrintMessage.setQrCode(silkCarRowCol.getSilkCode());
-                silkPrintMessage.setDoffNo(silkCarRowCol.getDoffNo());
-                silkPrintMessage.setSilkCarCode(silkCarOnline.getSilkCarCode());
-                silkPrintMessageList.add(silkPrintMessage);
-                /*     }*/
-            });
-            silkCarOnline.setDeleteFlag(true);
-        });
-//        print(silkPrintMessageList, silkCarOnlineList.get(0).getRemark());
+        for (int i = 0; i < books.size(); i++) {
+            SilkPrintMessage silkPrintMessage = new SilkPrintMessage();
+            silkPrintMessage.setBatchNo(books.get(i).bookName.length()>10?books.get(i).bookName.substring(0,9):books.get(i).bookName);
+            silkPrintMessage.setClasses("");
+            silkPrintMessage.setLineMachine("");
+            silkPrintMessage.setSpec("");
+            silkPrintMessage.setSpindleNum("");
+//            silkPrintMessage.setDoffDate(books.get(i).getCreateTime()==null?"":books.get(i).getCreateTime());
+            silkPrintMessage.setDoffDate(books.get(i).bookType);
+            silkPrintMessage.setQrCode(books.get(i).getBookCode());
+            silkPrintMessage.setDoffNo("");
+//            silkPrintMessage.setSilkCarCode(books.get(i).getBookCode());
+            silkPrintMessageList.add(silkPrintMessage);
+        }
         String printName = fileUtils.readText("D:\\printService\\printMachine.txt").replace("\n", "");
-//        print(silkPrintMessageList, "BTP-2200E(U) 1");
-
-//        String machine = fileUtils.readText("D:\\printService\\printMachine.txt").replace("\n", "");
-//        print(silkPrintMessageList, "BTP-2200E(U) 1");
         if (ObjectUtils.isEmpty(printName)) {
-            print(silkPrintMessageList, "ZDesigner ZT410-300dpi ZPL");
-//            print(silkPrintMessageList, "BTP-2200E(U) 1");
+//            print(silkPrintMessageList, "ZDesigner ZT410-300dpi ZPL");
+            print(silkPrintMessageList, "BTP-2200E(U) 1");
         } else {
-            print(silkPrintMessageList, printName);
+//            print(silkPrintMessageList, printName);
+            print(silkPrintMessageList, "BTP-2200E(U) 1");
         }
     }
 
