@@ -1,21 +1,8 @@
 package com.example.print.mqtt;
 
 
-import com.example.print.bean.MqttBean;
-import com.example.print.bean.PrintData;
 import com.example.print.okhttp.OkHttpUtils;
-import com.example.print.service.DoffService;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jackson.JsonObjectDeserializer;
-import org.springframework.http.converter.json.GsonBuilderUtils;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * 发布消息的回调类
@@ -37,8 +24,7 @@ import java.util.Map;
 public class PushCallback  {
     @Autowired
     OkHttpUtils okHttpUtils ;
-    @Autowired
-    DoffService doffService  = new DoffService();
+
 
 
 }
