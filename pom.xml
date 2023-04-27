@@ -54,6 +54,7 @@
         <!--Jackson required包-->
         <dependency>
             <groupId>com.google.code.gson</groupId>
+
             <artifactId>gson</artifactId>
         </dependency>
         <dependency>

@@ -18,5 +18,39 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class RabbitConfig {
+    @Bean(name = "firstConnectionFactory")
+    @Primary
+    public ConnectionFactory firstConnectionFactory(
+            @Value("${spring.rabbitmq.first.host}") String host,
+            @Value("${spring.rabbitmq.first.port}") int port,
+            @Value("${spring.rabbitmq.first.username}") String username,
+            @Value("${spring.rabbitmq.first.password}") String password
+    ) {
+        CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
+        connectionFactory.setHost(host);
+        connectionFactory.setPort(port);
+        connectionFactory.setUsername(username);
+        connectionFactory.setPassword(password);
+        return connectionFactory;
+    }
+
+    @Bean(name = "firstRabbitTemplate")
+    @Primary
+    public RabbitTemplate firstRabbitTemplate(
+            @Qualifier("firstConnectionFactory") ConnectionFactory connectionFactory
+    ) {
+        RabbitTemplate firstRabbitTemplate = new RabbitTemplate(connectionFactory);
+        return firstRabbitTemplate;
+    }
+
+    @Bean(name = "firstFactory")
+    public SimpleRabbitListenerContainerFactory firstFactory(
+            SimpleRabbitListenerContainerFactoryConfigurer configurer,
+            @Qualifier("firstConnectionFactory") ConnectionFactory connectionFactory
+    ) {
+        SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
+        configurer.configure(factory, connectionFactory);
+        return factory;
+    }
 
 }
