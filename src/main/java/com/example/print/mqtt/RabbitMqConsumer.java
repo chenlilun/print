@@ -6,6 +6,7 @@ import com.example.print.bean.PrintData;
 import com.example.print.bean.SilkCarOnline;
 import com.example.print.config.RabbitConfig;
 import com.example.print.okhttp.OkHttpUtils;
+import com.example.print.print.App;
 import com.example.print.print.Tcpclient;
 import com.example.print.service.DoffService;
 import com.example.print.utils.FileUtils;
@@ -47,9 +48,14 @@ import java.util.Map;
 //@RabbitListener(queues = RabbitConfig.QUEUE)
 @Component
 public class RabbitMqConsumer {
-    private Map<String,String> map = new HashMap<>();
+    @Autowired
+    private App app;
+    @Autowired
+    private Tcpclient tcpclient;
+    private Map<String, String> map = new HashMap<>();
+
     {
-        map.put("Z4", "10.12.2.222") ;
+        map.put("Z4", "10.12.2.222");
 //        map.put("Z4", "10.61.101.200") ;
 //        map.put("Z4", "192.168.116.199") ;
     }
@@ -60,26 +66,35 @@ public class RabbitMqConsumer {
 
     @RabbitListener(queues = "pal_queue", containerFactory = "firstFactory")
     public void consumer(String content, Channel channel, Message message) {
+        String msg = ""  ;
         try {
-         String   msg = new String(message.getBody(), "gb2312");
-            System.out.println("msg==="+msg);
+             msg = new String(message.getBody(), "gb2312");
+        } catch (Exception e) {
+            logger.error("业务逻辑异常:" + e.getMessage());
+            logger.error("业务逻辑异常数据:" + content);
+        }
+
+
+        try {
+            System.out.println("msg===" + msg);
             PackageBox packageBox = new Gson().fromJson(msg, PackageBox.class);
-            if (!ObjectUtils.isEmpty(packageBox)&&("POY".equals(packageBox.getProductName())||
+            if (!ObjectUtils.isEmpty(packageBox) && ("POY".equals(packageBox.getProductName()) ||
                     "FDY".equals(packageBox.getProductName())
-                    )) {
+            )) {
 //                Tcpclient.startServerSocket("10.12.3.66",9100,packageBox);
                 String ip = map.get(packageBox.getLine());
-                if(!ObjectUtils.isEmpty(ip)){
-                    System.out.println(ip+"+++++++"+packageBox.getLine());
-                    Tcpclient.startServerSocket(ip,9100,packageBox);
+                if (!ObjectUtils.isEmpty(ip)) {
+                    System.out.println(ip + "+++++++" + packageBox.getLine());
+                    tcpclient.startServerSocket(ip, 9100, packageBox);
                 }
 
-                System.out.println("====="+msg);
+                System.out.println("=====" + msg);
             }
             System.out.println("------------------");
         } catch (Exception e) {
             logger.error("业务逻辑异常:" + e.getMessage());
             logger.error("业务逻辑异常数据:" + content);
+            e.printStackTrace();
         } finally {
 
 

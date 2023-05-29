@@ -1,6 +1,8 @@
 package com.example.print.print;
 
 import com.example.print.bean.PackageBox;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -9,10 +11,10 @@ import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+@Component
 public class Tcpclient {
 
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 //        //String hex = Integer.toHexString(var);
 //
 //        String addressIP="192.168.116.240";
@@ -20,8 +22,10 @@ public class Tcpclient {
 //
 //        startServerSocket(addressIP,addressPort);
 //    }
+    @Autowired
+    private App app;
 
-    public static void startServerSocket(String addressIP, int addressPort, PackageBox packageBox) {
+    public  void startServerSocket(String addressIP, int addressPort, PackageBox packageBox) {
         try {
             //serverSocket = new ServerSocket(addressPort);
             Socket acceptSocket = new Socket(addressIP, addressPort);
@@ -54,7 +58,7 @@ public class Tcpclient {
 
     }
 
-    public static void sendData(DataOutputStream dos, PackageBox packageBox) {
+    public  void sendData(DataOutputStream dos, PackageBox packageBox) {
 //        String dataStr =
 //                        "^XA\n" +
 //                        "^CWZ,E:SIMSUN.TTF\n" +
@@ -123,9 +127,8 @@ public class Tcpclient {
                     "^PQ1,0,1,Y^XZ";*/
 
 
-
             String product = "POY".equals(packageBox.getProductName()) ? "涤纶预取向丝POY" : "涤纶牵伸丝FDY";
-            String realDatas = "^XA^CWZ,E:SimHei.TTF^JMA^LL1182^PW1100^MD0^PR3^PON^LRN^LH0,0^CI28^FO709,296^BQN,2,20^FDHM," + packageBox.getProductInfo().get(0).getNewProductCode() +
+            String realDatas = "^XA^CWZ,E:SimHei.TTF^JMA^LL1182^PW1100^MD0^PR3^PON^LRN^LH0,0^CI28^FO709,296^BQN,2,20^FDLA," + packageBox.getProductInfo().get(0).getNewProductCode() +
                     "^FS^PQ1^FO278,180^AZN,106,96^FD" +
                     product
                     + "^FS^FT240,349^A0N,63,56^FH^FD" +
@@ -147,7 +150,9 @@ public class Tcpclient {
                     "^FS^FT240,950^A0N,58,56^FH^FD" +
                     packageBox.getProductInfo().get(0).getNewProductCode() +
                     "^FS^FO700,783^AZN,106,106^FD甲001^FS^PQ1,0,1,Y^XZ";
-            dos.writeUTF(realDatas) ;
+
+
+            dos.writeUTF(app.print(realDatas));
             dos.flush();
 
           /*  String test = "^XA\n" +
@@ -190,7 +195,7 @@ public class Tcpclient {
 
     public static void main(String[] args) throws Exception {
 
-        Tcpclient.startServerSocket("10.12.2.222", 9100, new PackageBox());
+//        Tcpclient.startServerSocket("10.12.2.222", 9100, new PackageBox());
     }
 
     public static String scaleZPL(String rawCommands, Double scaleFactor) {
