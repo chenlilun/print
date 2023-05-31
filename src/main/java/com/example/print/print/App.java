@@ -118,12 +118,12 @@ public class App {
 
             //
             // 保存生成的二维码图像到文件
-            File outputFile = new File(filePath);
-            ImageIO.write(image, "png", outputFile);
+//            File outputFile = new File(filePath);
+//            ImageIO.write(image, "png", outputFile);
 
             System.out.println("二维码生成成功！");
             return image;
-        } catch (WriterException | IOException e) {
+        } catch (WriterException e) {
             System.out.println("二维码生成失败：" + e);
             return null;
         }
@@ -146,28 +146,28 @@ public class App {
     public static void main(String[] args) {
         // FileProcessor.filegen();
         for (int j = 0; j < 30; j++) {
-        // String dataStr = "^XA" +
-        //         "^CWZ,E:SimHei.TTF" +
-        //         "^JMA^LL800^PW1100^MD0^PR3^PON^LRN^LH0,0" +
-        //         "^CI28" +
-        //         "^FO480,200" +
-        //         "^BQN,2,10" +
-        //         "^FDLA,A20230419AHA02109111C11212121233344068^FS" +
-        //         "^PQ1" +
-        //         "^FO188,140^AZN,72,72^FD涤纶预取向丝POY^FS" +
-        //         "^FT148,236^A0N,39,38^FH^FD250dex/25f^FS" +
-        //         "^FT148,287^A0N,39,38^FH^FDXC5555400CD^FS" +
-        //         "^FT148,343^A0N,39,38^FH^FDAAA^FS" +
-        //         "^FT148,393^A0N,39,38^FH^FD99^FS" +
-        //         "^FO112,410^AZN,48,48^FD黄蓝条^FS" +
-        //         "^FT148,491^A0N,39,38^FH^FD720.23KG^FS" +
-        //         "^FT148,546^A0N,39,38^FH^FD726.23KG^FS" +
-        //         "^FT148,598^A0N,39,38^FH^FD2022-12-23^FS" +
-        //         "^FT148,650^A0N,39,38^FH^FDA201015XD020701DZ2B201^FS" +
-        //         "^FO462,530^AZN,72,72^FD甲001^FS" +
-        //         "^PQ1,0,1,Y^XZ";
+            // String dataStr = "^XA" +
+            //         "^CWZ,E:SimHei.TTF" +
+            //         "^JMA^LL800^PW1100^MD0^PR3^PON^LRN^LH0,0" +
+            //         "^CI28" +
+            //         "^FO480,200" +
+            //         "^BQN,2,10" +
+            //         "^FDLA,A20230419AHA02109111C11212121233344068^FS" +
+            //         "^PQ1" +
+            //         "^FO188,140^AZN,72,72^FD涤纶预取向丝POY^FS" +
+            //         "^FT148,236^A0N,39,38^FH^FD250dex/25f^FS" +
+            //         "^FT148,287^A0N,39,38^FH^FDXC5555400CD^FS" +
+            //         "^FT148,343^A0N,39,38^FH^FDAAA^FS" +
+            //         "^FT148,393^A0N,39,38^FH^FD99^FS" +
+            //         "^FO112,410^AZN,48,48^FD黄蓝条^FS" +
+            //         "^FT148,491^A0N,39,38^FH^FD720.23KG^FS" +
+            //         "^FT148,546^A0N,39,38^FH^FD726.23KG^FS" +
+            //         "^FT148,598^A0N,39,38^FH^FD2022-12-23^FS" +
+            //         "^FT148,650^A0N,39,38^FH^FDA201015XD020701DZ2B201^FS" +
+            //         "^FO462,530^AZN,72,72^FD甲001^FS" +
+            //         "^PQ1,0,1,Y^XZ";
 
-        // // 初步转化
+            // // 初步转化
 //        String zpldata = scaleZPL(dataStr, null);
 
 //        // 处理GFA指令 未实现，本项目用不到

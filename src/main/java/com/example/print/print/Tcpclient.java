@@ -69,11 +69,11 @@ public class Tcpclient {
             String product = "POY".equals(packageBox.getProductName()) ? "涤纶预取向丝POY" : "涤纶牵伸丝FDY";
 
             String qrcode = "^XA^CWZ,E:SIMSUN.TTF^JMA^LL1182^PW1100^MD0^PR3^PON^LRN^LH0,0^CI28^FO459,196^BQN,2,20^FDLA," + packageBox.getProductInfo().get(0).getNewProductCode()
-                 +"^FS";
+                    +"^FS";
             String print = app.print(qrcode);
             print += print +
 
-            "^PQ1^FO278,180^AZN,106,96^FD" +
+                    "^PQ1^FO278,180^AZN,106,96^FD" +
                     product
                     + "^FS^FT240,349^A0N,63,56^FH^FD" +
                     packageBox.getSpec() +
@@ -93,7 +93,7 @@ public class Tcpclient {
                     getDateStr(packageBox.getProduceTime()) +
                     "^FS^FT240,950^A0N,58,56^FH^FD" +
                     packageBox.getProductInfo().get(0).getNewProductCode() +
-                    "^FS^FO700,783^AZN,106,106^FD甲001^FS"+
+                    "^FS^FO700,783^AZN,106,106^FD"+packageBox.getClass()+packageBox.getProductInfo().get(0).getNewProductCode().substring(packageBox.getProductInfo().get(0).getNewProductCode().length()-3)+"^FS"+
                     "^PQ1,0,1,Y^XZ";
             dos.writeUTF(print);
 //            dos.writeUTF(dataStr111);
