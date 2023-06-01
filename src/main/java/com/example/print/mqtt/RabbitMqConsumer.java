@@ -55,9 +55,10 @@ public class RabbitMqConsumer {
     private Map<String, String> map = new HashMap<>();
 
     {
-        map.put("Z4", "10.12.2.222");
-//        map.put("Z4", "10.61.101.200") ;
-//        map.put("Z4", "192.168.116.199") ;
+        map.put("Z1", "10.12.4.99");
+        map.put("Z2", "10.12.7.69") ;
+        map.put("Z3", "10.12.7.48") ;
+        map.put("Z4", "10.61.101.200") ;
     }
 
 
