@@ -34,7 +34,7 @@
             <!--单个日志文件的大小 -->
             <MaxFileSize>50MB</MaxFileSize>
             <!--日志最大保留天说 -->
-            <MaxHistory>${MAX_HISTORY}</MaxHistory>
+            <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
@@ -54,7 +54,7 @@
             <!--单个日志文件的大小 -->
             <MaxFileSize>10MB</MaxFileSize>
             <!--日志最大保留天说 -->
-            <MaxHistory>${MAX_HISTORY}</MaxHistory>
+            <MaxHistory>30</MaxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>

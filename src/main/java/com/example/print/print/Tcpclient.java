@@ -85,7 +85,7 @@ public class Tcpclient {
                     packageBox.getGrade() +
                     "^FS^FT240,560^A0N,58,56^FH^FD" +
                     Integer.valueOf((int) packageBox.getProductInfo().get(0).getSilkCount()) +
-                    "^FS^FO226,600^AZN,58,56^FH^FD" +
+                    "^FS^FO226,600^AON,58,56^FH^FD" +
                     packageBox.getColor() +
                     "^FS^FT240,726^A0N,58,56^FH^FD" +
                     Double.parseDouble(dataFormat.format(packageBox.getProductInfo().get(0).getNetWeight())) + "KG" +
@@ -95,7 +95,7 @@ public class Tcpclient {
                     getDateStr(packageBox.getProduceTime()) +
                     "^FS^FT240,950^A0N,58,56^FH^FD" +
                     packageBox.getProductInfo().get(0).getNewProductCode() +
-                    "^FS^FO700,783^AZN,60,96^FD"+packageBox.getClassesInfo()+packageBox.getProductInfo().get(0).getNewProductCode().substring(packageBox.getProductInfo().get(0).getNewProductCode().length()-3)+"^FS"+
+                    "^FS^FO700,783^AON,60,96^FD"+packageBox.getClassesInfo()+packageBox.getProductInfo().get(0).getNewProductCode().substring(packageBox.getProductInfo().get(0).getNewProductCode().length()-3)+"^FS"+
                     "^PQ1,0,1,Y^XZ";
             dos.writeUTF(print);
 //            dos.writeUTF(dataStr111);
