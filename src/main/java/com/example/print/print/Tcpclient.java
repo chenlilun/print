@@ -8,6 +8,7 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -71,6 +72,7 @@ public class Tcpclient {
             String qrcode = "^XA^CWZ,E:SIMSUN.TTF^JMA^LL1182^PW1100^MD0^PR3^PON^LRN^LH0,0^CI28^FO449,160^BQN,2,20^FDLA," + packageBox.getProductInfo().get(0).getNewProductCode()
                     +"^FS";
             String print = app.print(qrcode);
+            DecimalFormat dataFormat = new DecimalFormat( "0.0");
             print += print +
 
                     "^PQ1^FO278,180^AZN,106,96^FD" +
@@ -86,9 +88,9 @@ public class Tcpclient {
                     "^FS^FO226,600^AZN,58,56^FH^FD" +
                     packageBox.getColor() +
                     "^FS^FT240,726^A0N,58,56^FH^FD" +
-                    packageBox.getProductInfo().get(0).getNetWeight() + "KG" +
+                    Double.parseDouble(dataFormat.format(packageBox.getProductInfo().get(0).getNetWeight())) + "KG" +
                     "^FS^FT240,807^A0N,58,56^FH^FD" +
-                    packageBox.getProductInfo().get(0).getGrossWeight() + "KG" +
+                    Double.parseDouble(dataFormat.format(packageBox.getProductInfo().get(0).getGrossWeight())) + "KG" +
                     "^FS^FT240,870^A0N,58,56^FH^FD" +
                     getDateStr(packageBox.getProduceTime()) +
                     "^FS^FT240,950^A0N,58,56^FH^FD" +
