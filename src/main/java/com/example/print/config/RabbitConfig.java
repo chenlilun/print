@@ -16,8 +16,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
-@Configuration
-public class RabbitConfig {
+//@Configuration
+public class RabbitConfig
+{}
+/*{
 
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -53,4 +55,4 @@ public class RabbitConfig {
         RabbitTemplate template = new RabbitTemplate(connectionFactory());
         return template;
     }
-}
+}*/
