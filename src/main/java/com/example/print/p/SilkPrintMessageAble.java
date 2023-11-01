@@ -98,7 +98,7 @@ public class SilkPrintMessageAble implements Printable {
             g2d.drawImage(QRCodeUtil.getImage(silkPrintMessage.getQrCode()),startXcode+(dValue1*i),startYcode,wh,wh,null);
             g2d.drawString(silkPrintMessage.getQrCode(),startX4+(dValue1*i),startY4);
             //画产品
-            g2d.drawString(silkPrintMessage.getProductName(),startX1+(dValue1*i),startY3+startY1);
+            g2d.drawString(silkPrintMessage.getProductName(),startX1+(dValue1*i),startY3+startY1+8);
             if(!ObjectUtils.isEmpty(silkPrintMessage.getDoffDateBefore())){
                 g2d.drawString(silkPrintMessage.getDoffDateBefore(),startX+(dValue1*i),startY33);
             }
