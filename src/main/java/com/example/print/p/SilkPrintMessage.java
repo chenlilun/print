@@ -17,8 +17,9 @@ public class SilkPrintMessage {
     private String silkCarCode;
      private String cls;;
     private String whiteNight;//1白班 2夜班
+    private String productName;//产品
 
-    public SilkPrintMessage(String spec, String batchNo, String classes, String lineMachine, String doffDate, String doffNo, String spindleNum, String qrCode,Boolean blank) {
+    public SilkPrintMessage(String spec, String batchNo, String classes, String lineMachine, String doffDate, String doffNo, String spindleNum, String qrCode,Boolean blank,String productName) {
         this.spec = spec;
         this.batchNo = batchNo;
         this.classes = classes;
@@ -28,6 +29,7 @@ public class SilkPrintMessage {
         this.spindleNum = spindleNum;
         this.qrCode = qrCode;
         this.blank = blank;
+        this.productName = productName;
     }
     public SilkPrintMessage(){}
     @Override
@@ -42,6 +44,7 @@ public class SilkPrintMessage {
                 ", spindleNum='" + spindleNum + '\'' +
                 ", qrCode='" + qrCode + '\'' +
                 ", silkCarCode='" + silkCarCode + '\'' +
+                ", productName='" + productName + '\'' +
                 '}';
     }
 }

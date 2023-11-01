@@ -90,6 +90,7 @@ public class DoffService {
     public void printCarSilkCode(List<SilkCarOnline> silkCarOnlineList) {
         List<SilkPrintMessage> silkPrintMessageList = new ArrayList<>();
         silkCarOnlineList.forEach(silkCarOnline -> {
+
             silkCarOnline.getSilkCarRowColList().stream().sorted(Comparator.comparing(SilkCarRowCol::getSortBy).reversed()).forEach(silkCarRowCol -> {
      /*           if (silkCarRowCol.getBlank() != null && silkCarRowCol.getBlank()) {
                     SilkPrintMessage silkPrintMessage = new SilkPrintMessage();
@@ -118,6 +119,9 @@ public class DoffService {
                 silkPrintMessage.setSpindleNum(silkCarRowCol.getSpindleNum());
                 silkPrintMessage.setQrCode(silkCarRowCol.getSilkCode());
                 silkPrintMessage.setDoffNo(silkCarRowCol.getDoffNo());
+                if(!ObjectUtils.isEmpty(silkCarOnline.getBatch())&&!ObjectUtils.isEmpty(silkCarOnline.getBatch().getProductName())){
+                    silkPrintMessage.setProductName(silkCarOnline.getBatch().getProductName());
+                }
                 silkPrintMessage.setSilkCarCode(silkCarOnline.getSilkCarCode());
                 silkPrintMessageList.add(silkPrintMessage);
                 /*     }*/
