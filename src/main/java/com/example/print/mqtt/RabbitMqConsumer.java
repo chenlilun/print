@@ -44,19 +44,20 @@ public class RabbitMqConsumer {
     private Logger logger = LoggerFactory.getLogger(RabbitMqConsumer.class);
 //    public static final String queue = FileUtils.readText("D:\\printService\\printMachine.txt").replace("\n", "");
 
-//    @RabbitListener(queues = "${spring.rabbitmq.listener.queues}")
+        @RabbitListener(queues = "${spring.rabbitmq.listener.queues}")
 //    @RabbitListener(queues = RabbitConfig.QUEUE)
+//    @RabbitListener(queues = "${dynamicQueueName}")
     public void consumer(String content, Channel channel, Message message) {
         System.out.println("自己mq消费了=====================");
         System.out.println("mq消费了===========" + content);
-        logger.error("收到mq打印信号"+content);
+        logger.error("收到mq打印信号" + content);
 
 
         try {
-            if(content.length()>15){
+            if (content.length() > 15) {
                 Gson silkGson = new Gson();
                 PrintData printData = silkGson.fromJson(content, PrintData.class);
-                System.out.println("对象===="+printData.toString());
+                System.out.println("对象====" + printData.toString());
                 doffService.printCarSilkCodes(printData.getData().silkCarOnlines);
             } else {
                 MqttBean mqttBean1 = new MqttBean();
@@ -67,7 +68,7 @@ public class RabbitMqConsumer {
                 headers.put("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZW5neWkiLCIxIjoicGFzc3dvcmQiLCJpYXQiOjE2MDA2NjM3Nzl9.J9-mIgeQeghzqerf5jA_DF-Ee8NGfBJ5ZSdrgit5RmU");
                 headers.put("Content-Type", "application/json");
                 String url = FileUtils.readText("D:\\printService\\url.txt").replaceAll("\n", "");
-                String printData = okHttpUtils.httpPostJson(url+"/api/doff/mqPrint", headers, postData);
+                String printData = okHttpUtils.httpPostJson(url + "/api/doff/mqPrint", headers, postData);
                 PrintData jjjj = null;
                 try {
                     jjjj = new Gson().fromJson(printData, PrintData.class);
